@@ -1,0 +1,63 @@
+body {
+    overflow: hidden;
+    background-color: rgb(226, 244, 255);
+}
+
+* {
+    font-family: "mainFont";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    display: none;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: calc(100vh - 9.6rem);
+    animation-name: slide_up;
+    animation-duration: 0.4s;
+
+    img {
+        position: absolute;
+    }
+}
+
+section[class~=show] {
+    display: block;
+}
+
+.responsive {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nino_Mtavruli", sans-serif;
+}
+
+@media screen and (min-width: 1980px) {
+    :root {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .desktop {
+        display: none;
+    }
+
+    .responsive {
+        display: block;
+    }
+}

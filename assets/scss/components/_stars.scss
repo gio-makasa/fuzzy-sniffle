@@ -1,0 +1,32 @@
+.stars_Sec {
+    background-image: url("../images/05_varsklavebi_background.svg");
+    background-position-x: -10rem;
+
+    img {
+        height: 25rem;
+        left: 13%;
+        bottom: 10rem;
+    }
+
+    #stars_info {
+        position: absolute;
+        width: 70%;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        background-color: $backgroundColor;
+        color: $darkTextColor;
+        padding: 1rem;
+        
+        h2 {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+}

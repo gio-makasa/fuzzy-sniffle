@@ -1,0 +1,31 @@
+.slider_Sec {
+    position: relative;
+    height: calc(100vh - 9.6rem);
+
+    .mySlide {
+        position: absolute;
+        height: inherit;
+        transition: all 0.7s linear;
+
+        embed {
+            bottom: 0;
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    [class*="fa-angle-"] {
+        position: absolute;
+        font-size: 70px;
+        color: $lightTextColor;
+        background-color: rgba(255, 255, 255, 0.7);
+        top: 50%;
+        margin: 0.8rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .fa-angle-right {
+        right: 0;
+    }
+}
