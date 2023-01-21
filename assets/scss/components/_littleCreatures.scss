@@ -1,30 +1,64 @@
-.little_Sec {
-    background-image: url("../images/04_pataraArsebebi_background.svg");
-    background-position-x: -50rem;
+.desktop {
+    .little_Sec {
+        background-image: url("../images/04_pataraArsebebi_background.svg");
+        background-position-x: -50rem;
 
-    img{
-        height: 15rem;
-        left: 5%;
-        bottom: 2rem;
-    }
-
-    #little_info {
-        position: absolute;
-        bottom: 5%;
-        right: 10%;
-        width: 45%;
-        background-color: $backgroundColor;
-        color: $darkTextColor;
-        padding: 1rem;
-        
-        h2 {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 2rem;
+        img {
+            height: 15rem;
+            left: 5%;
+            bottom: 2rem;
         }
 
-        p{
-            font-size: 1rem;
+        #little_info {
+            position: absolute;
+            bottom: 5%;
+            right: 10%;
+            width: 45%;
+            background-color: $TextbackgroundColor;
+            color: $darkTextColor;
+            padding: 1rem;
+
+            h2 {
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.responsive{
+    .little_Sec {
+        color: $darkTextColor;
+        background-color: white;
+
+        h2 {
+            font-weight: normal;
+            padding: 1rem 1rem 0;
+        }
+
+        .little_Sec_Back {
+            background-color: $backgroundColor;
+            background-image: url(../images/04_pataraArsebebi_background.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 34%;
+
+            img {
+                position: relative;
+                padding: 10rem 1rem 0;
+                left: 50%;
+                transform: translateX(-50%);
+                max-height: 20rem;
+            }
+        }
+
+        p {
+            margin: 1rem;
         }
     }
 }

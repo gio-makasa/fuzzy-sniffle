@@ -9,8 +9,9 @@
   font-display: swap;
 }
 body {
-  overflow: hidden;
+  overflow: scroll;
   background-color: rgb(226, 244, 255);
+  height: 100vh;
 }
 
 * {
@@ -30,12 +31,11 @@ section {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
-  height: calc(100vh - 9.6rem);
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
+  height: calc(100vh - 9.6rem);
 }
 section img {
   position: absolute;
@@ -64,11 +64,24 @@ h6 {
   }
 }
 @media screen and (max-width: 890px) {
+  body {
+    background-color: white;
+  }
   .desktop {
     display: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .responsive {
     display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: absolute;
+  }
+  .responsive section {
+    height: auto;
   }
 }
 @-webkit-keyframes slide_up {
@@ -102,7 +115,7 @@ header #title {
 }
 header #title .fa-bars {
   float: left;
-  padding-right: 1rem;
+  padding-right: 0.8rem;
   color: #707070;
   font-size: x-large;
   display: none;
@@ -161,6 +174,9 @@ header nav #tabs li:last-child {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  header #title {
+    padding-bottom: 0;
   }
   header #title .fa-bars {
     display: block;
@@ -223,22 +239,32 @@ header nav #tabs li:last-child {
     width: 15rem;
   }
 }
-.slider_Sec {
+@media only screen and (max-width: 355px) {
+  header {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header #title h1 {
+    font-size: 1.5rem;
+  }
+}
+.desktop .slider_Sec {
   position: relative;
   height: calc(100vh - 9.6rem);
 }
-.slider_Sec .mySlide {
+.desktop .slider_Sec .mySlide {
   position: absolute;
   height: inherit;
   -webkit-transition: all 0.7s linear;
   transition: all 0.7s linear;
 }
-.slider_Sec .mySlide embed {
+.desktop .slider_Sec .mySlide embed {
   bottom: 0;
   height: 100%;
   width: auto;
 }
-.slider_Sec [class*=fa-angle-] {
+.desktop .slider_Sec [class*=fa-angle-] {
   position: absolute;
   font-size: 70px;
   color: #707070;
@@ -248,7 +274,7 @@ header nav #tabs li:last-child {
   padding: 0.5rem;
   cursor: pointer;
 }
-.slider_Sec .fa-angle-right {
+.desktop .slider_Sec .fa-angle-right {
   right: 0;
 }
 
@@ -267,8 +293,6 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   background-color: white;
   padding: 1rem;
-  min-height: 100vh;
-  overflow: scroll;
 }
 .responsive .introduction_Sec h2 {
   font-weight: normal;
@@ -277,16 +301,16 @@ header nav #tabs li:last-child {
   margin-bottom: 1rem;
 }
 
-.three_Sec {
+.desktop .three_Sec {
   background-image: url("../images/01_samiPigura_background.svg");
   background-position-x: -70rem;
 }
-.three_Sec img {
+.desktop .three_Sec img {
   height: 20rem;
   left: 11%;
   bottom: 2rem;
 }
-.three_Sec #three_figure_info {
+.desktop .three_Sec #three_figure_info {
   position: absolute;
   top: 0;
   right: 0;
@@ -296,20 +320,47 @@ header nav #tabs li:last-child {
   padding: 1rem;
   margin: 1rem;
 }
-.three_Sec #three_figure_info h2 {
+.desktop .three_Sec #three_figure_info h2 {
   font-size: 2rem;
   font-weight: 500;
 }
-.three_Sec #three_figure_info #three_figure_p {
+.desktop .three_Sec #three_figure_info #three_figure_p {
   height: 100%;
   overflow: scroll;
 }
-.three_Sec #three_figure_info #three_figure_p p {
+.desktop .three_Sec #three_figure_info #three_figure_p p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
 
-.continue_Sec #continue_back_left {
+.responsive .three_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .three_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .three_Sec .three_Sec_Back {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/01_samiPigura_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 52%;
+}
+.responsive .three_Sec .three_Sec_Back img {
+  position: relative;
+  padding: 10rem 1rem 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-height: 30rem;
+}
+.responsive .three_Sec p {
+  margin: 1rem;
+}
+
+.desktop .continue_Sec #continue_back_left {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -319,7 +370,7 @@ header nav #tabs li:last-child {
   width: 50%;
   float: left;
 }
-.continue_Sec #continue_back_right {
+.desktop .continue_Sec #continue_back_right {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -329,17 +380,17 @@ header nav #tabs li:last-child {
   width: 50%;
   float: right;
 }
-.continue_Sec #continue_obj_left {
+.desktop .continue_Sec #continue_obj_left {
   height: 22rem;
   left: 5%;
   bottom: 3rem;
 }
-.continue_Sec #continue_obj_right {
+.desktop .continue_Sec #continue_obj_right {
   height: 23rem;
   right: 1%;
   bottom: 2rem;
 }
-.continue_Sec #continue_info {
+.desktop .continue_Sec #continue_info {
   position: absolute;
   width: 50%;
   top: 60%;
@@ -350,16 +401,60 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
 }
-.continue_Sec #continue_info h2 {
+.desktop .continue_Sec #continue_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
-.continue_Sec #continue_info p {
+.desktop .continue_Sec #continue_info p {
   font-size: 1rem;
 }
 
-.ecology_Sec #ecology_back_left {
+.responsive .continue_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .continue_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .continue_Sec .continue_Sec_Back_1 {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/02_gagrdzeleba_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.responsive .continue_Sec .continue_Sec_Back_1 img {
+  position: relative;
+  padding: 10rem 1rem 3rem;
+  left: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-height: 35rem;
+}
+.responsive .continue_Sec .continue_Sec_Back_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/02_gagrdzeleba_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+.responsive .continue_Sec .continue_Sec_Back_2 img {
+  position: relative;
+  padding: 10rem 1rem 2rem;
+  max-height: 34rem;
+}
+.responsive .continue_Sec p {
+  margin: 1rem;
+}
+
+.desktop .ecology_Sec #ecology_back_left {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -369,7 +464,7 @@ header nav #tabs li:last-child {
   width: 50%;
   float: left;
 }
-.ecology_Sec #ecology_back_right {
+.desktop .ecology_Sec #ecology_back_right {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
@@ -379,22 +474,22 @@ header nav #tabs li:last-child {
   width: 50%;
   float: right;
 }
-.ecology_Sec #ecology_obj_1 {
+.desktop .ecology_Sec #ecology_obj_1 {
   height: 25rem;
   left: 1%;
   bottom: 4rem;
 }
-.ecology_Sec #ecology_obj_2 {
+.desktop .ecology_Sec #ecology_obj_2 {
   height: 30rem;
   right: 15%;
   bottom: 3rem;
 }
-.ecology_Sec #ecology_obj_3 {
+.desktop .ecology_Sec #ecology_obj_3 {
   height: 22rem;
   right: 1%;
   bottom: 2rem;
 }
-.ecology_Sec #ecology_info {
+.desktop .ecology_Sec #ecology_info {
   position: absolute;
   top: 5%;
   left: 20%;
@@ -403,29 +498,82 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
 }
-.ecology_Sec #ecology_info h2 {
+.desktop .ecology_Sec #ecology_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
-.ecology_Sec #ecology_info #ecology_info_p {
+.desktop .ecology_Sec #ecology_info #ecology_info_p {
   overflow: scroll;
 }
-.ecology_Sec #ecology_info #ecology_info_p p {
+.desktop .ecology_Sec #ecology_info #ecology_info_p p {
   margin-top: 1rem;
   font-size: 1rem;
 }
 
-.little_Sec {
+.responsive .ecology_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .ecology_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .ecology_Sec .ecology_Sec_Back_1 {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/03_ekologia_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 27%;
+}
+.responsive .ecology_Sec .ecology_Sec_Back_1 img {
+  position: relative;
+  padding: 10rem 1rem 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-height: 35rem;
+}
+.responsive .ecology_Sec .ecology_Sec_Back_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/03_ekologia_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+}
+.responsive .ecology_Sec .ecology_Sec_Back_2 img {
+  position: relative;
+  padding-top: 5rem;
+  bottom: 0;
+  padding: 5rem 1rem;
+  max-height: 25rem;
+}
+.responsive .ecology_Sec .ecology_Sec_Back_2 img:first-child {
+  max-height: 30rem;
+}
+.responsive .ecology_Sec p {
+  margin: 1rem;
+}
+
+.desktop .little_Sec {
   background-image: url("../images/04_pataraArsebebi_background.svg");
   background-position-x: -50rem;
 }
-.little_Sec img {
+.desktop .little_Sec img {
   height: 15rem;
   left: 5%;
   bottom: 2rem;
 }
-.little_Sec #little_info {
+.desktop .little_Sec #little_info {
   position: absolute;
   bottom: 5%;
   right: 10%;
@@ -434,25 +582,52 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
 }
-.little_Sec #little_info h2 {
+.desktop .little_Sec #little_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
-.little_Sec #little_info p {
+.desktop .little_Sec #little_info p {
   font-size: 1rem;
 }
 
-.stars_Sec {
+.responsive .little_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .little_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .little_Sec .little_Sec_Back {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/04_pataraArsebebi_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 34%;
+}
+.responsive .little_Sec .little_Sec_Back img {
+  position: relative;
+  padding: 10rem 1rem 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-height: 20rem;
+}
+.responsive .little_Sec p {
+  margin: 1rem;
+}
+
+.desktop .stars_Sec {
   background-image: url("../images/05_varsklavebi_background.svg");
   background-position-x: -10rem;
 }
-.stars_Sec img {
+.desktop .stars_Sec img {
   height: 25rem;
   left: 13%;
   bottom: 10rem;
 }
-.stars_Sec #stars_info {
+.desktop .stars_Sec #stars_info {
   position: absolute;
   width: 70%;
   top: 50%;
@@ -463,26 +638,53 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
 }
-.stars_Sec #stars_info h2 {
+.desktop .stars_Sec #stars_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
-.stars_Sec #stars_info p {
+.desktop .stars_Sec #stars_info p {
   font-size: 1rem;
   margin-top: 1rem;
 }
 
-.love_Sec {
+.responsive .stars_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .stars_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .stars_Sec .stars_Sec_Back {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/05_varsklavebi_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 13%;
+}
+.responsive .stars_Sec .stars_Sec_Back img {
+  position: relative;
+  padding: 0 1rem 10rem;
+  left: 30%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  max-height: 40rem;
+}
+.responsive .stars_Sec p {
+  margin: 1rem;
+}
+
+.desktop .love_Sec {
   background-image: url("../images/06_sikvaruli_background.svg");
   background-position-x: -10rem;
 }
-.love_Sec img {
+.desktop .love_Sec img {
   height: 22rem;
   left: 25%;
   bottom: 2rem;
 }
-.love_Sec #love_info {
+.desktop .love_Sec #love_info {
   position: absolute;
   width: 33%;
   top: 10%;
@@ -492,11 +694,38 @@ header nav #tabs li:last-child {
   padding: 1rem;
   font-size: 1.3rem;
 }
-.love_Sec h2 {
+.desktop .love_Sec h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
-.love_Sec p {
+.desktop .love_Sec p {
   font-size: 1rem;
+}
+
+.responsive .love_Sec {
+  color: rgba(51, 51, 51, 0.8235294118);
+  background-color: white;
+}
+.responsive .love_Sec h2 {
+  font-weight: normal;
+  padding: 1rem 1rem 0;
+}
+.responsive .love_Sec .love_Sec_Back {
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/06_sikvaruli_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 18%;
+}
+.responsive .love_Sec .love_Sec_Back img {
+  position: relative;
+  padding: 10rem 1rem 1rem;
+  left: 30%;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  max-height: 30rem;
+}
+.responsive .love_Sec p {
+  margin: 1rem;
 }

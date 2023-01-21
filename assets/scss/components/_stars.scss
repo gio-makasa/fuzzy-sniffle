@@ -1,32 +1,66 @@
-.stars_Sec {
-    background-image: url("../images/05_varsklavebi_background.svg");
-    background-position-x: -10rem;
+.desktop {
+    .stars_Sec {
+        background-image: url("../images/05_varsklavebi_background.svg");
+        background-position-x: -10rem;
 
-    img {
-        height: 25rem;
-        left: 13%;
-        bottom: 10rem;
-    }
-
-    #stars_info {
-        position: absolute;
-        width: 70%;
-        top: 50%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        background-color: $backgroundColor;
-        color: $darkTextColor;
-        padding: 1rem;
-        
-        h2 {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 2rem;
+        img {
+            height: 25rem;
+            left: 13%;
+            bottom: 10rem;
         }
 
-        p{
-            font-size: 1rem;
-            margin-top: 1rem;
+        #stars_info {
+            position: absolute;
+            width: 70%;
+            top: 50%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            background-color: $TextbackgroundColor;
+            color: $darkTextColor;
+            padding: 1rem;
+
+            h2 {
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.responsive {
+    .stars_Sec {
+        color: $darkTextColor;
+        background-color: white;
+
+        h2 {
+            font-weight: normal;
+            padding: 1rem 1rem 0;
+        }
+
+        .stars_Sec_Back {
+            background-color: $backgroundColor;
+            background-image: url(../images/05_varsklavebi_background.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 13%;
+
+            img {
+                position: relative;
+                padding: 0 1rem 10rem;
+                left: 30%;
+                transform: translateX(-30%);
+                max-height: 40rem;
+            }
+        }
+
+        p {
+            margin: 1rem;
         }
     }
 }

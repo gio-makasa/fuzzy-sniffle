@@ -10,8 +10,8 @@
     font-display: swap;
 }
 
-@import './components/reset';
 @import './components/variables';
+@import './components/reset';
 @import './components/animations';
 @import './components/header';
 @import './components/slider';

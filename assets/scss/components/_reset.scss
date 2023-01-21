@@ -1,6 +1,7 @@
 body {
-    overflow: hidden;
-    background-color: rgb(226, 244, 255);
+    overflow: scroll;
+    background-color: $backgroundColor;
+    height: 100vh;
 }
 
 * {
@@ -19,10 +20,9 @@ section {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
-    height: calc(100vh - 9.6rem);
     animation-name: slide_up;
     animation-duration: 0.4s;
+    height: calc(100vh - 9.6rem);
 
     img {
         position: absolute;
@@ -53,11 +53,22 @@ h6 {
 }
 
 @media screen and (max-width: 890px) {
+    body {
+        background-color: white;
+    }
+
     .desktop {
         display: none;
+        height: fit-content;
     }
 
     .responsive {
         display: block;
+        height: fit-content;
+        position: absolute;
+
+        section{
+            height: auto;
+        }
     }
 }

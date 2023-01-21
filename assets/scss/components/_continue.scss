@@ -1,52 +1,101 @@
-.continue_Sec {
-    #continue_back_left {
-        position: relative;
-        object-fit: cover;
-        object-position: 0 0;
-        height: 100%;
-        width: 50%;
-        float: left;
+.desktop{
+    .continue_Sec {
+        #continue_back_left {
+            position: relative;
+            object-fit: cover;
+            object-position: 0 0;
+            height: 100%;
+            width: 50%;
+            float: left;
+        }
+    
+        #continue_back_right {
+            position: relative;
+            object-fit: cover;
+            object-position: 100% 0;
+            height: 100%;
+            width: 50%;
+            float: right;
+        }
+    
+        #continue_obj_left {
+            height: 22rem;
+            left: 5%;
+            bottom: 3rem;
+        }
+    
+        #continue_obj_right {
+            height: 23rem;
+            right: 1%;
+            bottom: 2rem;
+        }
+    
+        #continue_info {
+            position: absolute;
+            width: 50%;
+            top: 60%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            background-color: $TextbackgroundColor;
+            color: $darkTextColor;
+            padding: 1rem;
+    
+            h2 {
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 1rem;
+            }
+        }
     }
+}
 
-    #continue_back_right {
-        position: relative;
-        object-fit: cover;
-        object-position: 100% 0;
-        height: 100%;
-        width: 50%;
-        float: right;
-    }
-
-    #continue_obj_left {
-        height: 22rem;
-        left: 5%;
-        bottom: 3rem;
-    }
-
-    #continue_obj_right {
-        height: 23rem;
-        right: 1%;
-        bottom: 2rem;
-    }
-
-    #continue_info {
-        position: absolute;
-        width: 50%;
-        top: 60%;
-        left: 45%;
-        transform: translate(-50%, -50%);
-        background-color: $backgroundColor;
+.responsive {
+    .continue_Sec {
         color: $darkTextColor;
-        padding: 1rem;
+        background-color: white;
 
         h2 {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            font-size: 2rem;
+            font-weight: normal;
+            padding: 1rem 1rem 0;
+        }
+
+        .continue_Sec_Back_1 {
+            background-color: $backgroundColor;
+            background-image: url(../images/02_gagrdzeleba_background.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            img {
+                position: relative;
+                padding: 10rem 1rem 3rem;
+                left: 30%;
+                transform: translateX(-50%);
+                max-height: 35rem;
+            }
+        }
+
+        .continue_Sec_Back_2 {
+            display: flex;
+            justify-content: end;
+            background-color: $backgroundColor;
+            background-image: url(../images/02_gagrdzeleba_background.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+
+            img {
+                position: relative;
+                padding: 10rem 1rem 2rem;
+                max-height: 34rem;
+            }
         }
 
         p {
-            font-size: 1rem;
+            margin: 1rem;
         }
     }
 }
