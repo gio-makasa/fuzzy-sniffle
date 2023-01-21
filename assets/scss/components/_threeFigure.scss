@@ -14,26 +14,23 @@
             top: 0;
             right: 0;
             width: 50%;
+            min-height: fit-content;
+            max-height: 90%;
             background-color: $TextbackgroundColor;
             color: $darkTextColor;
             padding: 1rem;
             margin: 1rem;
+            overflow: scroll;
 
             h2 {
                 font-size: 2rem;
                 font-weight: 500;
             }
 
-            #three_figure_p {
-                height: 100%;
-                overflow: scroll;
-
-                p {
-                    font-size: 1.1rem;
-                    margin-bottom: 1rem;
-                }
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
             }
-
         }
     }
 }

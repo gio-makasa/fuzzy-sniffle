@@ -77,3 +77,37 @@ function openNav() {
 function closeNav() {
     tabs.classList.remove('openedNav')
 }
+
+//responsive flows
+let touchstartX = 0
+let touchendX = 0
+
+//change tabs on left/right slide
+function nex_prev(n) {
+    const current = document.querySelector('.active').innerHTML;
+
+    for (let i = 0; i < tabsContent.length; i++) {
+        if (tabsContent[i].tabName == current) {
+            showSec(tabsContent[i + n].sectionName);
+        }
+    };
+}
+
+function checkDirection() {
+    if (touchendX < touchstartX) {
+        nex_prev(1); //next tab
+    }
+
+    if (touchendX > touchstartX) {
+        nex_prev(-1); //prev tab
+    }
+}
+
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX
+});
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX
+    checkDirection()
+});
