@@ -9,9 +9,8 @@
   font-display: swap;
 }
 body {
-  overflow: scroll;
   background-color: rgb(226, 244, 255);
-  height: 100vh;
+  overflow: hidden;
 }
 
 * {
@@ -31,11 +30,12 @@ section {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(100vh - 9.6rem);
+  overflow: hidden;
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
-  height: calc(100vh - 9.6rem);
 }
 section img {
   position: absolute;
@@ -75,13 +75,11 @@ h6 {
   }
   .responsive {
     display: block;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: absolute;
   }
   .responsive section {
-    height: auto;
+    position: relative;
+    overflow: scroll;
+    height: calc(100vh - 4rem);
   }
 }
 @-webkit-keyframes slide_up {
@@ -241,30 +239,24 @@ header nav #tabs li:last-child {
 }
 @media only screen and (max-width: 355px) {
   header {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 4rem;
   }
   header #title h1 {
     font-size: 1.5rem;
   }
 }
-.desktop .slider_Sec {
-  position: relative;
-  height: calc(100vh - 9.6rem);
-}
-.desktop .slider_Sec .mySlide {
+.slider_Sec .mySlide {
   position: absolute;
   height: inherit;
   -webkit-transition: all 0.7s linear;
   transition: all 0.7s linear;
 }
-.desktop .slider_Sec .mySlide embed {
+.slider_Sec .mySlide embed, .slider_Sec .mySlide img {
   bottom: 0;
   height: 100%;
   width: auto;
 }
-.desktop .slider_Sec [class*=fa-angle-] {
+.slider_Sec [class*=fa-angle-] {
   position: absolute;
   font-size: 70px;
   color: #707070;
@@ -274,7 +266,7 @@ header nav #tabs li:last-child {
   padding: 0.5rem;
   cursor: pointer;
 }
-.desktop .slider_Sec .fa-angle-right {
+.slider_Sec .fa-angle-right {
   right: 0;
 }
 

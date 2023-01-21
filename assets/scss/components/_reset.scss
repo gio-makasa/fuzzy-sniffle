@@ -1,7 +1,7 @@
 body {
-    overflow: scroll;
     background-color: $backgroundColor;
-    height: 100vh;
+    overflow: hidden;
+    // height: 100%;
 }
 
 * {
@@ -20,9 +20,10 @@ section {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
+    height: calc(100vh - 9.6rem);
+    overflow: hidden;
     animation-name: slide_up;
     animation-duration: 0.4s;
-    height: calc(100vh - 9.6rem);
 
     img {
         position: absolute;
@@ -64,11 +65,11 @@ h6 {
 
     .responsive {
         display: block;
-        height: fit-content;
-        position: absolute;
 
         section{
-            height: auto;
+            position: relative;
+            overflow: scroll;
+            height: calc(100vh - 4rem);
         }
     }
 }
