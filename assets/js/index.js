@@ -1,6 +1,7 @@
 const tabs = document.getElementById("tabs"); //navigation tabs
 const slide = document.querySelector(".mySlide"); //slide
 const respSlide = document.querySelector("#slide_resp"); //responsive slide
+var slideRightEdge = false;
 
 //tabs names for navigation
 const tabsContent = [
@@ -95,8 +96,9 @@ function nex_prev(current, n) {
 function checkDirection() {
     const current = document.querySelector('.active').innerHTML;
 
+    
     if (touchendX - touchstartX < -100) {
-        if (current == "პროექტის შესახებ" || current == "თავფურცელი") { //right edge
+        if (current == "პროექტის შესახებ" || !slideRightEdge) { //right edge
             return;
         }
         nex_prev(current, 1); //next tab
@@ -120,8 +122,9 @@ document.addEventListener('touchend', e => {
 });
 
 respSlide.addEventListener("scroll", () => {
-    console.log(scrollDemo.scrollLeft)
-    if(scrollDemo.scrollLeft > 1862.4){
-        nex_prev("თავფურცელი", 1);
+    if (respSlide.scrollLeft >= 2237 - window.innerWidth) {
+        slideRightEdge = true;
+    } else {
+        slideRightEdge = false;
     }
 }, { passive: true });
