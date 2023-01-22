@@ -1,5 +1,6 @@
 const tabs = document.getElementById("tabs"); //navigation tabs
 const slide = document.querySelector(".mySlide"); //slide
+const respSlide = document.querySelector("#slide_resp"); //responsive slide
 
 //tabs names for navigation
 const tabsContent = [
@@ -83,9 +84,7 @@ let touchstartX = 0
 let touchendX = 0
 
 //change tabs on left/right slide
-function nex_prev(n) {
-    const current = document.querySelector('.active').innerHTML;
-
+function nex_prev(current, n) {
     for (let i = 0; i < tabsContent.length; i++) {
         if (tabsContent[i].tabName == current) {
             showSec(tabsContent[i + n].sectionName);
@@ -94,12 +93,20 @@ function nex_prev(n) {
 }
 
 function checkDirection() {
-    if (touchendX < touchstartX) {
-        nex_prev(1); //next tab
+    const current = document.querySelector('.active').innerHTML;
+
+    if (touchendX - touchstartX < -100) {
+        if (current == "პროექტის შესახებ" || current == "თავფურცელი") { //right edge
+            return;
+        }
+        nex_prev(current, 1); //next tab
     }
 
-    if (touchendX > touchstartX) {
-        nex_prev(-1); //prev tab
+    if (touchendX - touchstartX > 100) { //left edge
+        if (current == "თავფურცელი") {
+            return;
+        }
+        nex_prev(current, -1); //prev tab
     }
 }
 
@@ -111,3 +118,10 @@ document.addEventListener('touchend', e => {
     touchendX = e.changedTouches[0].screenX
     checkDirection()
 });
+
+respSlide.addEventListener("scroll", () => {
+    console.log(scrollDemo.scrollLeft)
+    if(scrollDemo.scrollLeft > 1862.4){
+        nex_prev("თავფურცელი", 1);
+    }
+}, { passive: true });

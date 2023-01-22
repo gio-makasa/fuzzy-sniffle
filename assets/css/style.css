@@ -248,8 +248,7 @@ header nav #tabs li:last-child {
   -webkit-transition: all 0.7s linear;
   transition: all 0.7s linear;
 }
-.desktop .slider_Sec .mySlide embed,
-.desktop .slider_Sec .mySlide img {
+.desktop .slider_Sec .mySlide embed {
   height: 100%;
 }
 .desktop .slider_Sec [class*=fa-angle-] {
@@ -267,6 +266,7 @@ header nav #tabs li:last-child {
 }
 
 .responsive .slider_Sec {
+  position: relative;
   background-color: rgb(226, 244, 255);
 }
 .responsive .slider_Sec p {
@@ -275,12 +275,12 @@ header nav #tabs li:last-child {
   margin-left: 3rem;
   position: fixed;
 }
-.responsive .slider_Sec .mySlide {
+.responsive .slider_Sec #slide_resp {
   position: relative;
   height: 100%;
+  overflow: auto;
 }
-.responsive .slider_Sec .mySlide embed,
-.responsive .slider_Sec .mySlide img {
+.responsive .slider_Sec #slide_resp img {
   position: absolute;
   height: 80%;
   bottom: 0;

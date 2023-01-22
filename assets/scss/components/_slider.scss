@@ -5,8 +5,7 @@
             height: inherit;
             transition: all 0.7s linear;
 
-            embed,
-            img {
+            embed {
                 height: 100%;
             }
         }
@@ -30,6 +29,7 @@
 
 .responsive {
     .slider_Sec {
+        position: relative;
         background-color: $backgroundColor;
 
         p {
@@ -38,13 +38,13 @@
             margin-left: 3rem;
             position: fixed;
         }
-        
-        .mySlide {
+
+        #slide_resp {
             position: relative;
             height: 100%;
-            
-            embed,
-            img {
+            overflow: auto;
+
+            img{
                 position: absolute;
                 height: 80%;
                 bottom: 0;
