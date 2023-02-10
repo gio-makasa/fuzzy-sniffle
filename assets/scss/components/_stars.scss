@@ -3,7 +3,7 @@
         background-image: url("../images/05_varsklavebi_background.svg");
         background-position-x: -10rem;
 
-        img {
+        #stars_obj {
             height: 25rem;
             left: 13%;
             bottom: 10rem;
@@ -25,6 +25,10 @@
                 font-size: 2rem;
             }
 
+            #stars_resp_obj {
+                display: none;
+            }
+
             p {
                 font-size: 1rem;
                 margin-top: 1rem;
@@ -35,32 +39,44 @@
 
 .responsive {
     .stars_Sec {
-        color: $darkTextColor;
-        background-color: white;
-
-        h2 {
-            font-weight: normal;
-            padding: 1rem 1rem 0;
+        #stars_obj {
+            display: none;
         }
 
-        .stars_Sec_Back {
-            background-color: $backgroundColor;
-            background-image: url(../images/05_varsklavebi_background.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 13%;
+        #stars_info {
+            position: relative;
+            width: 100%;
+            background-color: $TextbackgroundColor;
+            color: $darkTextColor;
 
-            img {
-                position: relative;
-                padding: 0 1rem 10rem;
-                left: 30%;
-                transform: translateX(-30%);
-                max-height: 40rem;
+            h2 {
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                font-size: 2rem;
+                padding: 1rem 1rem 0;
             }
-        }
 
-        p {
-            margin: 1rem;
+            #stars_resp {
+                display: block;
+                position: relative;
+                background-color: $backgroundColor;
+                background-image: url(../images/05_varsklavebi_background.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 15%;
+
+                #stars_resp_obj {
+                    position: relative;
+                    padding: 0 2rem 7rem;
+                    min-height: 20rem;
+                    max-height: 30rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 1rem;
+            }
         }
     }
 }

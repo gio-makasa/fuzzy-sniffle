@@ -1,9 +1,14 @@
 .desktop {
     .three_Sec {
-        background-image: url("../images/01_samiPigura_background.svg");
-        background-position-x: -70rem;
+        #three_Sec_back {
+            position: relative;
+            object-fit: cover;
+            object-position: 42% 0;
+            transform: translateX(-42%);
+            height: 100%;
+        }
 
-        img {
+        #three_Sec_obj {
             height: 20rem;
             left: 11%;
             bottom: 2rem;
@@ -21,6 +26,10 @@
             padding: 1rem;
             margin: 1rem;
             overflow: scroll;
+
+            .three_Sec_resp {
+                display: none;
+            }
 
             h2 {
                 font-size: 2rem;
@@ -40,12 +49,18 @@
         color: $darkTextColor;
         background-color: white;
 
+        #three_Sec_back,
+        #three_Sec_obj {
+            display: none;
+        }
+
         h2 {
             font-weight: normal;
             padding: 1rem 1rem 0;
         }
 
-        .three_Sec_Back {
+        .three_Sec_resp {
+            display: block;
             background-color: $backgroundColor;
             background-image: url(../images/01_samiPigura_background.svg);
             background-repeat: no-repeat;

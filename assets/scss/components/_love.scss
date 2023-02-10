@@ -1,9 +1,9 @@
 .desktop {
     .love_Sec {
         background-image: url("../images/06_sikvaruli_background.svg");
-        background-position-x: -10rem;
+        background-position-x: -11.2rem;
 
-        img {
+        #love_obj {
             height: 22rem;
             left: 25%;
             bottom: 2rem;
@@ -34,15 +34,7 @@
 
 .responsive {
     .love_Sec {
-        color: $darkTextColor;
-        background-color: white;
-
-        h2 {
-            font-weight: normal;
-            padding: 1rem 1rem 0;
-        }
-
-        .love_Sec_Back {
+        #love_back {
             background-color: $backgroundColor;
             background-image: url(../images/06_sikvaruli_background.svg);
             background-repeat: no-repeat;
@@ -58,8 +50,40 @@
             }
         }
 
-        p {
-            margin: 1rem;
+        #love_info {
+            position: relative;
+            width: 100%;
+            background-color: $TextbackgroundColor;
+            color: $darkTextColor;
+
+            h2 {
+                margin-bottom: 0.5rem;
+                font-weight: 500;
+                font-size: 2rem;
+                padding: 1rem 1rem 0;
+            }
+
+            #ecology_images_resp {
+                display: block;
+                background-color: $backgroundColor;
+                background-image: url(../images/03_ekologia_background.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 27%;
+
+                #ecology_obj_resp {
+                    position: relative;
+                    padding: 10rem 1rem 3rem;
+                    left: 45%;
+                    transform: translateX(-50%);
+                    max-height: 35rem;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                margin: 1rem;
+            }
         }
     }
 }

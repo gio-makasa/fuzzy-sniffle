@@ -1,6 +1,11 @@
 @font-face {
   font-family: "mainFont";
-  src: url(../fonts/bpg_arial_2009.ttf) format("truetype");
+  src: url(../fonts/HelveticaNeue-01.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "mainFontp";
+  src: url(../fonts/HelveticaNeue-Thin-13.ttf) format("truetype");
   font-display: swap;
 }
 @font-face {
@@ -9,8 +14,8 @@
   font-display: swap;
 }
 body {
-  background-color: rgb(226, 244, 255);
   overflow: hidden;
+  background-color: rgb(226, 244, 255);
 }
 
 * {
@@ -45,7 +50,7 @@ section[class~=show] {
   display: block;
 }
 
-.responsive {
+.hide {
   display: none;
 }
 
@@ -121,6 +126,7 @@ header #title h1 {
   font-weight: 600;
 }
 header #title p {
+  font-family: "mainFontp", sans-serif;
   color: #707070;
   font-size: 1.8rem;
   font-weight: 100;
@@ -242,6 +248,13 @@ header nav #tabs li:last-child {
     font-size: 1.5rem;
   }
 }
+.desktop .slider_Sec {
+  position: relative;
+  height: calc(100vh - 9.6rem);
+}
+.desktop .slider_Sec p {
+  display: none;
+}
 .desktop .slider_Sec .mySlide {
   position: absolute;
   height: inherit;
@@ -249,7 +262,12 @@ header nav #tabs li:last-child {
   transition: all 0.7s linear;
 }
 .desktop .slider_Sec .mySlide embed {
+  bottom: 0;
   height: 100%;
+  width: auto;
+}
+.desktop .slider_Sec .mySlide img {
+  display: none;
 }
 .desktop .slider_Sec [class*=fa-angle-] {
   position: absolute;
@@ -275,21 +293,30 @@ header nav #tabs li:last-child {
   margin-left: 3rem;
   position: fixed;
 }
-.responsive .slider_Sec #slide_resp {
+.responsive .slider_Sec .mySlide {
   position: relative;
   height: 100%;
   overflow: auto;
 }
-.responsive .slider_Sec #slide_resp img {
+.responsive .slider_Sec .mySlide embed {
+  display: none;
+}
+.responsive .slider_Sec .mySlide img {
   position: absolute;
   height: 80%;
   bottom: 0;
+}
+.responsive .slider_Sec [class*=fa-angle-] {
+  display: none;
 }
 
 .desktop .introduction_Sec {
   background-color: white;
   padding: 5% 5% 0 5%;
   overflow: scroll;
+}
+.desktop .introduction_Sec h2 {
+  display: none;
 }
 .desktop .introduction_Sec p {
   color: rgba(51, 51, 51, 0.8235294118);
@@ -303,17 +330,23 @@ header nav #tabs li:last-child {
   padding: 1rem;
 }
 .responsive .introduction_Sec h2 {
-  font-weight: normal;
+  display: block;
 }
 .responsive .introduction_Sec p {
   margin-bottom: 1rem;
 }
 
-.desktop .three_Sec {
-  background-image: url("../images/01_samiPigura_background.svg");
-  background-position-x: -70rem;
+.desktop .three_Sec #three_Sec_back {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 42% 0;
+     object-position: 42% 0;
+  -webkit-transform: translateX(-42%);
+          transform: translateX(-42%);
+  height: 100%;
 }
-.desktop .three_Sec img {
+.desktop .three_Sec #three_Sec_obj {
   height: 20rem;
   left: 11%;
   bottom: 2rem;
@@ -333,6 +366,9 @@ header nav #tabs li:last-child {
   margin: 1rem;
   overflow: scroll;
 }
+.desktop .three_Sec #three_figure_info .three_Sec_resp {
+  display: none;
+}
 .desktop .three_Sec #three_figure_info h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -346,18 +382,23 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   background-color: white;
 }
+.responsive .three_Sec #three_Sec_back,
+.responsive .three_Sec #three_Sec_obj {
+  display: none;
+}
 .responsive .three_Sec h2 {
   font-weight: normal;
   padding: 1rem 1rem 0;
 }
-.responsive .three_Sec .three_Sec_Back {
+.responsive .three_Sec .three_Sec_resp {
+  display: block;
   background-color: rgb(226, 244, 255);
   background-image: url(../images/01_samiPigura_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 52%;
 }
-.responsive .three_Sec .three_Sec_Back img {
+.responsive .three_Sec .three_Sec_resp img {
   position: relative;
   padding: 10rem 1rem 0;
   left: 50%;
@@ -409,57 +450,72 @@ header nav #tabs li:last-child {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
+  z-index: 1;
 }
 .desktop .continue_Sec #continue_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
+.desktop .continue_Sec #continue_info #continue_images_resp {
+  display: none;
+}
 .desktop .continue_Sec #continue_info p {
   font-size: 1rem;
 }
 
-.responsive .continue_Sec {
-  color: rgba(51, 51, 51, 0.8235294118);
-  background-color: white;
+.responsive .continue_Sec #continue_back_left,
+.responsive .continue_Sec #continue_obj_left {
+  display: none;
 }
-.responsive .continue_Sec h2 {
-  font-weight: normal;
+.responsive .continue_Sec #continue_back_right {
+  background-color: rgb(226, 244, 255);
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 0;
+     object-position: 100% 0;
+  height: 100%;
+  width: 100%;
+  float: right;
+}
+.responsive .continue_Sec #continue_obj_right {
+  position: relative;
+  height: 23rem;
+  float: right;
+  top: 12rem;
+}
+.responsive .continue_Sec #continue_info {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(51, 51, 51, 0.8235294118);
+}
+.responsive .continue_Sec #continue_info h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
   padding: 1rem 1rem 0;
 }
-.responsive .continue_Sec .continue_Sec_Back_1 {
-  background-color: rgb(226, 244, 255);
-  background-image: url(../images/02_gagrdzeleba_background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.responsive .continue_Sec .continue_Sec_Back_1 img {
+.responsive .continue_Sec #continue_info #continue_images_resp {
   position: relative;
-  padding: 10rem 1rem 3rem;
-  left: 30%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  max-height: 35rem;
+  display: block;
+  overflow: hidden;
 }
-.responsive .continue_Sec .continue_Sec_Back_2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+.responsive .continue_Sec #continue_info #continue_images_resp #continue_back_resp {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: rgb(226, 244, 255);
-  background-image: url(../images/02_gagrdzeleba_background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  height: 100%;
 }
-.responsive .continue_Sec .continue_Sec_Back_2 img {
+.responsive .continue_Sec #continue_info #continue_images_resp #continue_obj_resp {
   position: relative;
-  padding: 10rem 1rem 2rem;
-  max-height: 34rem;
+  height: 28rem;
+  padding: 5rem 0 2rem 2rem;
 }
-.responsive .continue_Sec p {
+.responsive .continue_Sec #continue_info p {
+  font-size: 1rem;
   margin: 1rem;
 }
 
@@ -473,27 +529,26 @@ header nav #tabs li:last-child {
   width: 50%;
   float: left;
 }
-.desktop .ecology_Sec #ecology_back_right {
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 85% 0;
-     object-position: 85% 0;
-  height: 100%;
-  width: 50%;
-  float: right;
-}
 .desktop .ecology_Sec #ecology_obj_1 {
   height: 25rem;
   left: 1%;
   bottom: 4rem;
 }
-.desktop .ecology_Sec #ecology_obj_2 {
+.desktop .ecology_Sec #ecology_right #ecology_back_right {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 83% 0;
+     object-position: 83% 0;
+  height: 100%;
+  width: 50%;
+  float: right;
+}
+.desktop .ecology_Sec #ecology_right #ecology_obj_2 {
   height: 30rem;
   right: 15%;
   bottom: 3rem;
 }
-.desktop .ecology_Sec #ecology_obj_3 {
+.desktop .ecology_Sec #ecology_right #ecology_obj_3 {
   height: 22rem;
   right: 1%;
   bottom: 2rem;
@@ -511,75 +566,93 @@ header nav #tabs li:last-child {
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
   overflow: scroll;
+  z-index: 1;
 }
 .desktop .ecology_Sec #ecology_info h2 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 2rem;
 }
+.desktop .ecology_Sec #ecology_info #ecology_images_resp {
+  display: none;
+}
 .desktop .ecology_Sec #ecology_info p {
   margin-top: 1rem;
   font-size: 1rem;
 }
 
-.responsive .ecology_Sec {
-  color: rgba(51, 51, 51, 0.8235294118);
-  background-color: white;
+.responsive .ecology_Sec #ecology_back_left,
+.responsive .ecology_Sec #ecology_obj_1 {
+  display: none;
 }
-.responsive .ecology_Sec h2 {
-  font-weight: normal;
+.responsive .ecology_Sec #ecology_right #ecology_back_right {
+  position: absolute;
+  background-color: rgb(226, 244, 255);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 80% 0;
+     object-position: 80% 0;
+  height: 100%;
+  width: 100%;
+  float: right;
+}
+.responsive .ecology_Sec #ecology_right #ecology_obj_2 {
+  position: relative;
+  height: 30rem;
+  right: 25%;
+  float: right;
+}
+.responsive .ecology_Sec #ecology_right #ecology_obj_3 {
+  position: absolute;
+  height: 22rem;
+  right: 1%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+.responsive .ecology_Sec #ecology_info {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(51, 51, 51, 0.8235294118);
+}
+.responsive .ecology_Sec #ecology_info h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
   padding: 1rem 1rem 0;
 }
-.responsive .ecology_Sec .ecology_Sec_Back_1 {
+.responsive .ecology_Sec #ecology_info #ecology_images_resp {
+  display: block;
   background-color: rgb(226, 244, 255);
   background-image: url(../images/03_ekologia_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 27%;
 }
-.responsive .ecology_Sec .ecology_Sec_Back_1 img {
+.responsive .ecology_Sec #ecology_info #ecology_images_resp #ecology_obj_resp {
   position: relative;
   padding: 10rem 1rem 3rem;
-  left: 50%;
+  left: 45%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   max-height: 35rem;
 }
-.responsive .ecology_Sec .ecology_Sec_Back_2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-color: rgb(226, 244, 255);
-  background-image: url(../images/03_ekologia_background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 80%;
-}
-.responsive .ecology_Sec .ecology_Sec_Back_2 img {
-  position: relative;
-  padding-top: 5rem;
-  bottom: 0;
-  padding: 5rem 1rem;
-  max-height: 25rem;
-}
-.responsive .ecology_Sec .ecology_Sec_Back_2 img:first-child {
-  max-height: 30rem;
-}
-.responsive .ecology_Sec p {
+.responsive .ecology_Sec #ecology_info p {
+  font-size: 1rem;
   margin: 1rem;
 }
 
-.desktop .little_Sec {
-  background-image: url("../images/04_pataraArsebebi_background.svg");
-  background-position-x: -50rem;
+.desktop .little_Sec #little_back {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 30% 0;
+     object-position: 30% 0;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  height: 100%;
 }
-.desktop .little_Sec img {
+.desktop .little_Sec #little_obj {
   height: 15rem;
   left: 5%;
   bottom: 2rem;
@@ -592,6 +665,7 @@ header nav #tabs li:last-child {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(51, 51, 51, 0.8235294118);
   padding: 1rem;
+  z-index: 1;
 }
 .desktop .little_Sec #little_info h2 {
   margin-bottom: 0.5rem;
@@ -602,30 +676,37 @@ header nav #tabs li:last-child {
   font-size: 1rem;
 }
 
-.responsive .little_Sec {
-  color: rgba(51, 51, 51, 0.8235294118);
-  background-color: white;
+.responsive .little_Sec #little_back {
+  background-color: rgb(226, 244, 255);
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 35% 0;
+     object-position: 35% 0;
+  height: 100%;
+  width: 100%;
+  float: right;
 }
-.responsive .little_Sec h2 {
-  font-weight: normal;
+.responsive .little_Sec #little_obj {
+  position: relative;
+  height: 15rem;
+  width: 100%;
+  top: 20rem;
+}
+.responsive .little_Sec #little_info {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(51, 51, 51, 0.8235294118);
+}
+.responsive .little_Sec #little_info h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
   padding: 1rem 1rem 0;
 }
-.responsive .little_Sec .little_Sec_Back {
-  background-color: rgb(226, 244, 255);
-  background-image: url(../images/04_pataraArsebebi_background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 34%;
-}
-.responsive .little_Sec .little_Sec_Back img {
-  position: relative;
-  padding: 10rem 1rem 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  max-height: 20rem;
-}
-.responsive .little_Sec p {
+.responsive .little_Sec #little_info p {
+  font-size: 1rem;
   margin: 1rem;
 }
 
@@ -633,7 +714,7 @@ header nav #tabs li:last-child {
   background-image: url("../images/05_varsklavebi_background.svg");
   background-position-x: -10rem;
 }
-.desktop .stars_Sec img {
+.desktop .stars_Sec #stars_obj {
   height: 25rem;
   left: 13%;
   bottom: 10rem;
@@ -654,43 +735,54 @@ header nav #tabs li:last-child {
   font-weight: 500;
   font-size: 2rem;
 }
+.desktop .stars_Sec #stars_info #stars_resp_obj {
+  display: none;
+}
 .desktop .stars_Sec #stars_info p {
   font-size: 1rem;
   margin-top: 1rem;
 }
 
-.responsive .stars_Sec {
-  color: rgba(51, 51, 51, 0.8235294118);
-  background-color: white;
+.responsive .stars_Sec #stars_obj {
+  display: none;
 }
-.responsive .stars_Sec h2 {
-  font-weight: normal;
+.responsive .stars_Sec #stars_info {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(51, 51, 51, 0.8235294118);
+}
+.responsive .stars_Sec #stars_info h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
   padding: 1rem 1rem 0;
 }
-.responsive .stars_Sec .stars_Sec_Back {
+.responsive .stars_Sec #stars_info #stars_resp {
+  display: block;
+  position: relative;
   background-color: rgb(226, 244, 255);
   background-image: url(../images/05_varsklavebi_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 13%;
+  background-position: 15%;
 }
-.responsive .stars_Sec .stars_Sec_Back img {
+.responsive .stars_Sec #stars_info #stars_resp #stars_resp_obj {
   position: relative;
-  padding: 0 1rem 10rem;
-  left: 30%;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
-  max-height: 40rem;
+  padding: 0 2rem 7rem;
+  min-height: 20rem;
+  max-height: 30rem;
 }
-.responsive .stars_Sec p {
+.responsive .stars_Sec #stars_info p {
+  font-size: 1rem;
   margin: 1rem;
 }
 
 .desktop .love_Sec {
   background-image: url("../images/06_sikvaruli_background.svg");
-  background-position-x: -10rem;
+  background-position-x: -11.2rem;
 }
-.desktop .love_Sec img {
+.desktop .love_Sec #love_obj {
   height: 22rem;
   left: 25%;
   bottom: 2rem;
@@ -714,22 +806,14 @@ header nav #tabs li:last-child {
   font-size: 1rem;
 }
 
-.responsive .love_Sec {
-  color: rgba(51, 51, 51, 0.8235294118);
-  background-color: white;
-}
-.responsive .love_Sec h2 {
-  font-weight: normal;
-  padding: 1rem 1rem 0;
-}
-.responsive .love_Sec .love_Sec_Back {
+.responsive .love_Sec #love_back {
   background-color: rgb(226, 244, 255);
   background-image: url(../images/06_sikvaruli_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 18%;
 }
-.responsive .love_Sec .love_Sec_Back img {
+.responsive .love_Sec #love_back img {
   position: relative;
   padding: 10rem 1rem 1rem;
   left: 30%;
@@ -737,6 +821,35 @@ header nav #tabs li:last-child {
           transform: translateX(-30%);
   max-height: 30rem;
 }
-.responsive .love_Sec p {
+.responsive .love_Sec #love_info {
+  position: relative;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(51, 51, 51, 0.8235294118);
+}
+.responsive .love_Sec #love_info h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 1rem 1rem 0;
+}
+.responsive .love_Sec #love_info #ecology_images_resp {
+  display: block;
+  background-color: rgb(226, 244, 255);
+  background-image: url(../images/03_ekologia_background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 27%;
+}
+.responsive .love_Sec #love_info #ecology_images_resp #ecology_obj_resp {
+  position: relative;
+  padding: 10rem 1rem 3rem;
+  left: 45%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-height: 35rem;
+}
+.responsive .love_Sec #love_info p {
+  font-size: 1rem;
   margin: 1rem;
 }

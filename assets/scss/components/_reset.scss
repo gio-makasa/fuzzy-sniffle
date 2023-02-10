@@ -1,7 +1,6 @@
 body {
-    background-color: $backgroundColor;
     overflow: hidden;
-    // height: 100%;
+    background-color: $backgroundColor;
 }
 
 * {
@@ -34,7 +33,7 @@ section[class~=show] {
     display: block;
 }
 
-.responsive {
+.hide {
     display: none;
 }
 

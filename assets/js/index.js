@@ -1,7 +1,9 @@
 const tabs = document.getElementById("tabs"); //navigation tabs
 const slide = document.querySelector(".mySlide"); //slide
-const respSlide = document.querySelector("#slide_resp"); //responsive slide
-var slideRightEdge = false;
+const respSlide = document.querySelector(".mySlide"); //responsive slide
+let slideRightEdge = false;
+const arrowLeft = document.querySelector("#arrow-left");
+const arrowRight = document.querySelector("#arrow-right");
 
 //tabs names for navigation
 const tabsContent = [
@@ -42,13 +44,11 @@ function showSec(section) {
     document.querySelector(`.${section}`).classList.add('active');
 
     //show section
-    let fromSec = document.querySelectorAll('.show'); //sections that is shown
-    fromSec[0].classList.remove('show');
-    fromSec[1].classList.remove('show');
+    let fromSec = document.querySelector('.show'); //sections that is shown
+    fromSec.classList.remove('show');
 
-    let toSec = document.querySelectorAll(`.${section}_Sec`); //sections that should be shown
-    toSec[0].classList.add('show');
-    toSec[1].classList.add('show');
+    let toSec = document.querySelector(`.${section}_Sec`); //sections that should be shown
+    toSec.classList.add('show');
 }
 
 // switch between slides
@@ -61,10 +61,15 @@ function plusSlides(n) {
 }
 
 function showSlides() {
-    if (slideIndex < 0) {
+    if (slideIndex <= 0) {
         slideIndex = 0;
+        arrowLeft.classList.add("hide");
     } else if (slideIndex > 100) {
         slideIndex = 100;
+        arrowRight.classList.add("hide");
+    } else {
+        arrowLeft.classList.remove("hide");
+        arrowRight.classList.remove("hide");
     }
 
     slide.style.left = `${slideIndex}%`;
@@ -79,6 +84,22 @@ function openNav() {
 function closeNav() {
     tabs.classList.remove('openedNav')
 }
+
+//listen windows size on resize and load
+['resize', 'load'].forEach(evt =>
+    window.addEventListener(evt, sizeChange)
+);
+
+function sizeChange() {
+    if (window.innerWidth >= 890) {
+        document.querySelector('main').classList.remove('responsive');
+        document.querySelector('main').classList.add('desktop');
+    } else {
+        document.querySelector('main').classList.add('responsive');
+        document.querySelector('main').classList.remove('desktop');
+    }
+}
+
 
 //responsive flows
 let touchstartX = 0
@@ -96,15 +117,14 @@ function nex_prev(current, n) {
 function checkDirection() {
     const current = document.querySelector('.active').innerHTML;
 
-    
-    if (touchendX - touchstartX < -100) {
-        if (current == "პროექტის შესახებ" || !slideRightEdge) { //right edge
+    if (touchendX - touchstartX < -80) {
+        if (current == "პროექტის შესახებ" || (current == "თავფურცელი" && !slideRightEdge)) { //right edge
             return;
         }
         nex_prev(current, 1); //next tab
     }
 
-    if (touchendX - touchstartX > 100) { //left edge
+    if (touchendX - touchstartX > 80) { //left edge
         if (current == "თავფურცელი") {
             return;
         }

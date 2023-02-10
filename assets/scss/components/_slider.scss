@@ -1,12 +1,25 @@
 .desktop {
     .slider_Sec {
+        position: relative;
+        height: calc(100vh - 9.6rem);
+
+        p {
+            display: none;
+        }
+
         .mySlide {
             position: absolute;
             height: inherit;
             transition: all 0.7s linear;
 
             embed {
+                bottom: 0;
                 height: 100%;
+                width: auto;
+            }
+
+            img{
+                display: none;
             }
         }
 
@@ -27,6 +40,7 @@
     }
 }
 
+
 .responsive {
     .slider_Sec {
         position: relative;
@@ -39,16 +53,24 @@
             position: fixed;
         }
 
-        #slide_resp {
+        .mySlide {
             position: relative;
             height: 100%;
             overflow: auto;
 
-            img{
+            embed{
+                display: none;
+            }
+
+            img {
                 position: absolute;
                 height: 80%;
                 bottom: 0;
             }
+        }
+
+        [class*="fa-angle-"] {
+            display: none;
         }
     }
 }
