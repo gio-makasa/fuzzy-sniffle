@@ -69,14 +69,17 @@ h6 {
 }
 @media screen and (max-width: 890px) {
   body {
-    background-color: yellow;
+    background-color: rebeccapurple;
+    overflow-y: hidden;
   }
   body .responsive {
     overflow-y: visible;
-    height: calc(100vh - 4rem);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body .responsive section {
-    height: 100%;
+    height: calc(100vh - 4rem);
     overflow-y: visible;
   }
 }
