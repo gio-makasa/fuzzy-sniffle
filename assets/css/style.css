@@ -70,17 +70,18 @@ h6 {
 }
 @media screen and (max-width: 890px) {
   body {
-    background-color: white;
-    overflow-y: visible;
-    height: 100vh;
-  }
-  .responsive {
-    overflow-y: visible;
-  }
-  .responsive section {
+    background-color: red;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .responsive {
+    overflow-y: visible;
+    height: calc(100vh - 4rem);
+  }
+  .responsive section {
+    height: 100%;
+    overflow-y: visible;
   }
 }
 @-webkit-keyframes slide_up {
