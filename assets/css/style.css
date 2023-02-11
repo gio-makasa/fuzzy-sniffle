@@ -23,7 +23,7 @@ body section {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 9.6rem);
-  overflow-x: hidden;
+  overflow: hidden;
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
@@ -69,17 +69,22 @@ h6 {
 }
 @media screen and (max-width: 890px) {
   body {
-    background-color: rebeccapurple;
-    overflow-y: hidden;
-    height: calc(100vh - 4rem);
+    background-color: aqua;
+    overflow: scroll;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: white;
   }
   body .responsive {
-    overflow-y: visible;
-    height: inherit;
+    overflow: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body .responsive section {
-    overflow-y: visible;
-    height: inherit;
+    overflow: visible;
+    height: calc(100vh - 4rem);
   }
 }
 @-webkit-keyframes slide_up {
@@ -237,9 +242,6 @@ header nav #tabs li:last-child {
   }
 }
 @media only screen and (max-width: 355px) {
-  header {
-    height: 4rem;
-  }
   header #title h1 {
     font-size: 1.5rem;
   }

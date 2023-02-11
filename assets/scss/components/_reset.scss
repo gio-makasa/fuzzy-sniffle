@@ -8,10 +8,10 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         height: calc(100vh - 9.6rem);
-        overflow-x: hidden;
+        overflow: hidden;
         animation-name: slide_up;
         animation-duration: 0.4s;
-    
+
         img {
             position: absolute;
         }
@@ -28,7 +28,6 @@ body {
 *::-webkit-scrollbar {
     display: none;
 }
-
 
 section[class~=show] {
     display: block;
@@ -55,19 +54,18 @@ h6 {
 
 @media screen and (max-width: 890px) {
     body {
-        background-color: rebeccapurple;
-        overflow-y: hidden;
-        height: calc(100vh - 4rem);
-        // height: 1000px;
-        
+        background-color: aqua;
+        overflow: scroll;
+        // height: fit-content;
+        height: fit-content;
+        background-color: white;
+
         .responsive {
-            overflow-y: visible;
-            height: inherit;
-            // height: fit-content;
-            
-            section{
-                overflow-y: visible;
-                height: inherit;
+            overflow: visible;
+            height: fit-content;
+            section {
+                overflow: visible;
+                height: calc(100vh - 4rem);
             }
         }
     }
