@@ -13,10 +13,6 @@
   src: url(../fonts/bpg_nino_mtavruli_book.ttf) format("truetype");
   font-display: swap;
 }
-html {
-  overflow-y: scroll;
-}
-
 body {
   overflow: hidden;
   background-color: rgb(226, 244, 255);
@@ -73,14 +69,16 @@ h6 {
   }
 }
 @media screen and (max-width: 890px) {
+  html {
+    overflow-y: scroll;
+  }
   body {
     background-color: white;
-  }
-  .desktop {
-    display: none;
+    overflow: visible;
   }
   .responsive {
     display: block;
+    overflow: visible;
   }
   .responsive section {
     position: relative;

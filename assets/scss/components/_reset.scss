@@ -1,4 +1,3 @@
-html { overflow-y: scroll; }
 body {
     overflow: hidden;
     background-color: $backgroundColor;
@@ -54,18 +53,20 @@ h6 {
 }
 
 @media screen and (max-width: 890px) {
-    body {
-        background-color: white;
+    html {
+        overflow-y: scroll;
     }
 
-    .desktop {
-        display: none;
+    body {
+        background-color: white;
+        overflow: visible;
     }
 
     .responsive {
         display: block;
+        overflow: visible;
 
-        section{
+        section {
             position: relative;
             overflow: scroll;
             height: calc(100vh - 4rem);
