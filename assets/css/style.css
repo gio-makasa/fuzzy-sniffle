@@ -37,6 +37,7 @@ section {
   background-repeat: no-repeat;
   height: calc(100vh - 9.6rem);
   overflow-x: hidden;
+  overflow-y: visible;
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
@@ -71,6 +72,7 @@ h6 {
 @media screen and (max-width: 890px) {
   body {
     background-color: white;
+    overflow: scroll;
   }
   .desktop {
     display: none;
