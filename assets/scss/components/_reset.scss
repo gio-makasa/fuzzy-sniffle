@@ -54,17 +54,17 @@ h6 {
 
 @media screen and (max-width: 890px) {
     body {
-        background-color: red;
+        background-color: forestgreen;
         // overflow-y: visible;
         height: fit-content;
     }
 
     .responsive {
         overflow-y: visible;
-        height: calc(100vh - 4rem);
-
+        height: 100%;
+        
         section{
-            height: 100%;
+            height: calc(100vh - 4rem);
             overflow-y: visible;
         }
     }
