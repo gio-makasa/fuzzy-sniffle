@@ -72,6 +72,9 @@ h6 {
   body {
     background-color: white;
     overflow-y: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .responsive {
     overflow-y: visible;
