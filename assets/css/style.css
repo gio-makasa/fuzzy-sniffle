@@ -71,13 +71,11 @@ h6 {
   body {
     background-color: rebeccapurple;
     overflow-y: hidden;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100vh;
   }
   body .responsive {
-    height: calc(100vh - 4rem);
     overflow-y: visible;
+    height: 100%;
   }
   body .responsive section {
     overflow-y: visible;
