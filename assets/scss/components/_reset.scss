@@ -1,21 +1,7 @@
+html { overflow-y: scroll; }
 body {
     overflow: hidden;
     background-color: $backgroundColor;
-
-    section {
-        display: none;
-        position: relative;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: calc(100vh - 9.6rem);
-        overflow: hidden;
-        animation-name: slide_up;
-        animation-duration: 0.4s;
-
-        img {
-            position: absolute;
-        }
-    }
 }
 
 * {
@@ -27,6 +13,21 @@ body {
 
 *::-webkit-scrollbar {
     display: none;
+}
+
+section {
+    display: none;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 9.6rem);
+    overflow: hidden;
+    animation-name: slide_up;
+    animation-duration: 0.4s;
+
+    img {
+        position: absolute;
+    }
 }
 
 section[class~=show] {
@@ -54,19 +55,20 @@ h6 {
 
 @media screen and (max-width: 890px) {
     body {
-        background-color: aqua;
-        overflow: scroll;
-        // height: fit-content;
-        height: fit-content;
         background-color: white;
+    }
 
-        .responsive {
-            overflow: visible;
-            height: fit-content;
-            section {
-                overflow: visible;
-                height: calc(100vh - 4rem);
-            }
+    .desktop {
+        display: none;
+    }
+
+    .responsive {
+        display: block;
+
+        section{
+            position: relative;
+            overflow: scroll;
+            height: calc(100vh - 4rem);
         }
     }
 }

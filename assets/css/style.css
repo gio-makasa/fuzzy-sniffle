@@ -13,24 +13,13 @@
   src: url(../fonts/bpg_nino_mtavruli_book.ttf) format("truetype");
   font-display: swap;
 }
+html {
+  overflow-y: scroll;
+}
+
 body {
   overflow: hidden;
   background-color: rgb(226, 244, 255);
-}
-body section {
-  display: none;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: calc(100vh - 9.6rem);
-  overflow: hidden;
-  -webkit-animation-name: slide_up;
-          animation-name: slide_up;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-}
-body section img {
-  position: absolute;
 }
 
 * {
@@ -43,6 +32,22 @@ body section img {
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+section {
+  display: none;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 9.6rem);
+  overflow: hidden;
+  -webkit-animation-name: slide_up;
+          animation-name: slide_up;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+section img {
+  position: absolute;
 }
 
 section[class~=show] {
@@ -69,21 +74,17 @@ h6 {
 }
 @media screen and (max-width: 890px) {
   body {
-    background-color: aqua;
-    overflow: scroll;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
     background-color: white;
   }
-  body .responsive {
-    overflow: visible;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+  .desktop {
+    display: none;
   }
-  body .responsive section {
-    overflow: visible;
+  .responsive {
+    display: block;
+  }
+  .responsive section {
+    position: relative;
+    overflow: scroll;
     height: calc(100vh - 4rem);
   }
 }
@@ -175,7 +176,9 @@ header nav #tabs li:last-child {
 }
 @media only screen and (max-width: 890px) {
   header {
-    height: 4rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   header #title {
     padding-bottom: 0;
@@ -242,6 +245,9 @@ header nav #tabs li:last-child {
   }
 }
 @media only screen and (max-width: 355px) {
+  header {
+    height: 4rem;
+  }
   header #title h1 {
     font-size: 1.5rem;
   }
