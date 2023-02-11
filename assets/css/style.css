@@ -82,7 +82,6 @@ h6 {
   .responsive section {
     position: relative;
     overflow: scroll;
-    height: calc(100vh - 4rem);
   }
 }
 @-webkit-keyframes slide_up {
