@@ -20,7 +20,7 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - 9.6rem);
-    overflow: hidden;
+    overflow-x: hidden;
     animation-name: slide_up;
     animation-duration: 0.4s;
 

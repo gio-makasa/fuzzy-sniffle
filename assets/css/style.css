@@ -36,7 +36,7 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 9.6rem);
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
@@ -172,9 +172,7 @@ header nav #tabs li:last-child {
 }
 @media only screen and (max-width: 890px) {
   header {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 4rem;
   }
   header #title {
     padding-bottom: 0;
