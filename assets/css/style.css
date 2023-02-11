@@ -71,15 +71,15 @@ h6 {
   body {
     background-color: rebeccapurple;
     overflow-y: hidden;
-    height: 100vh;
+    height: calc(100vh - 4rem);
   }
   body .responsive {
     overflow-y: visible;
-    height: 100%;
+    height: inherit;
   }
   body .responsive section {
     overflow-y: visible;
-    height: 100%;
+    height: inherit;
   }
 }
 @-webkit-keyframes slide_up {

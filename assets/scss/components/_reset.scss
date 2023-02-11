@@ -57,17 +57,17 @@ h6 {
     body {
         background-color: rebeccapurple;
         overflow-y: hidden;
-        height: 100vh;
+        height: calc(100vh - 4rem);
         // height: 1000px;
         
         .responsive {
             overflow-y: visible;
-            height: 100%;
+            height: inherit;
             // height: fit-content;
             
             section{
                 overflow-y: visible;
-                height: 100%;
+                height: inherit;
             }
         }
     }
