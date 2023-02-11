@@ -67,8 +67,7 @@ h6 {
 
         section{
             position: relative;
-            overflow: scroll;
-            height: fit-content;
+            height: calc(100vh - 4rem);
         }
     }
 }
