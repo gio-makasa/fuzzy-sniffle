@@ -71,7 +71,6 @@ h6 {
 @media screen and (max-width: 890px) {
   body {
     background-color: white;
-    overflow: scroll;
   }
   .desktop {
     display: none;
