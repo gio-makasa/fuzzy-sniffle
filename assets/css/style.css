@@ -73,16 +73,10 @@ h6 {
     background-color: white;
     overflow-y: visible;
   }
-  .desktop {
-    display: none;
-  }
   .responsive {
-    display: block;
     overflow-y: visible;
   }
   .responsive section {
-    position: relative;
-    overflow-y: visible;
     height: calc(100vh - 4rem);
   }
 }

@@ -58,17 +58,10 @@ h6 {
         overflow-y: visible;
     }
 
-    .desktop {
-        display: none;
-    }
-
     .responsive {
-        display: block;
         overflow-y: visible;
 
         section{
-            position: relative;
-            overflow-y: visible;
             height: calc(100vh - 4rem);
         }
     }
