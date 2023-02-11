@@ -56,14 +56,14 @@ h6 {
     body {
         background-color: white;
         overflow-y: visible;
-        height: fit-content;
+        height: 100vh;
     }
 
     .responsive {
         overflow-y: visible;
 
         section{
-            height: calc(100vh - 4rem);
+            height: fit-content;
         }
     }
 }

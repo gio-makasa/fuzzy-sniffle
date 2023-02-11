@@ -72,15 +72,15 @@ h6 {
   body {
     background-color: white;
     overflow-y: visible;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 100vh;
   }
   .responsive {
     overflow-y: visible;
   }
   .responsive section {
-    height: calc(100vh - 4rem);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @-webkit-keyframes slide_up {
