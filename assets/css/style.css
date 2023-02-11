@@ -17,20 +17,7 @@ body {
   overflow: hidden;
   background-color: rgb(226, 244, 255);
 }
-
-* {
-  font-family: "mainFont";
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-*::-webkit-scrollbar {
-  display: none;
-}
-
-section {
+body section {
   display: none;
   position: relative;
   background-size: cover;
@@ -42,8 +29,20 @@ section {
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
 }
-section img {
+body section img {
   position: absolute;
+}
+
+* {
+  font-family: "mainFont";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 section[class~=show] {
@@ -71,15 +70,12 @@ h6 {
 @media screen and (max-width: 890px) {
   body {
     background-color: forestgreen;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
   }
-  .responsive {
+  body .responsive {
     overflow-y: visible;
     height: 100%;
   }
-  .responsive section {
+  body .responsive section {
     height: calc(100vh - 4rem);
     overflow-y: visible;
   }
