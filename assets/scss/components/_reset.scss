@@ -55,6 +55,7 @@ h6 {
 @media screen and (max-width: 890px) {
     body {
         background-color: white;
+        overflow-y: scroll;
     }
 
     .desktop {
@@ -63,6 +64,7 @@ h6 {
 
     .responsive {
         display: block;
+        overflow-y: visible;
 
         section{
             position: relative;
