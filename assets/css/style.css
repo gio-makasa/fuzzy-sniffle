@@ -69,12 +69,8 @@ h6 {
   }
 }
 @media screen and (max-width: 890px) {
-  html {
-    overflow-y: scroll;
-  }
   body {
     background-color: white;
-    overflow: visible;
   }
   .responsive {
     display: block;
