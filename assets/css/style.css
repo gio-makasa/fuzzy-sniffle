@@ -31,18 +31,21 @@ body {
 }
 
 section {
-  display: none;
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: calc(100vh - 9.6rem);
-  overflow: hidden;
   -webkit-animation-name: slide_up;
           animation-name: slide_up;
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s;
+  display: none;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-section img {
+
+.desktop section {
+  height: calc(100vh - 9.6rem);
+  overflow: hidden;
+}
+.desktop section img {
   position: absolute;
 }
 
@@ -69,17 +72,21 @@ h6 {
   }
 }
 @media screen and (max-width: 890px) {
+  html {
+    overflow: scroll;
+  }
   body {
     background-color: white;
+    overflow: hidden;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .responsive {
     display: block;
-    overflow: visible;
   }
   .responsive section {
     position: relative;
-    overflow: scroll;
-    height: calc(100vh - 4rem);
   }
 }
 @-webkit-keyframes slide_up {
