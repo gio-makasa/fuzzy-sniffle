@@ -114,6 +114,7 @@ header {
   background-color: #E1F4FF;
   padding: 0.3rem 0;
   height: 9.6rem;
+  z-index: 2;
 }
 header #title {
   padding: 1rem;
@@ -300,7 +301,7 @@ header nav #tabs li:last-child {
 }
 .responsive .slider_Sec .mySlide {
   position: relative;
-  height: 100%;
+  height: calc(100vh - 4rem);
   overflow: auto;
 }
 .responsive .slider_Sec .mySlide embed {
@@ -547,11 +548,12 @@ header nav #tabs li:last-child {
   background-image: url("../images/03_ekologia_background.svg");
   background-color: rgb(226, 244, 255);
   background-position: right;
-  background-position-x: 70%;
+  background-position-x: 83%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  float: right;
 }
 .desktop .ecology_Sec #ecology_right #ecology_obj_2 {
   height: 30rem;
@@ -665,6 +667,7 @@ header nav #tabs li:last-child {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    padding-left: 0.5rem;
   }
 }
 .desktop .little_Sec #little_image #little_back {
