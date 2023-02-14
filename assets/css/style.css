@@ -604,13 +604,16 @@ header nav #tabs li:last-child {
   background-size: cover;
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .responsive .ecology_Sec #ecology_right #ecology_obj_2 {
   position: relative;
   height: 30rem;
   padding-top: 3rem;
   width: 100%;
-  right: 3rem;
+  padding-right: 3rem;
 }
 .responsive .ecology_Sec #ecology_right #ecology_obj_3 {
   position: absolute;
@@ -652,6 +655,18 @@ header nav #tabs li:last-child {
   margin: 1rem;
 }
 
+@media screen and (max-width: 520px) {
+  .responsive .ecology_Sec #ecology_right {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .responsive .ecology_Sec #ecology_right #ecology_obj_2 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .desktop .little_Sec #little_image #little_back {
   position: absolute;
   -o-object-fit: cover;
