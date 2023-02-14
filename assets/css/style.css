@@ -610,6 +610,7 @@ header nav #tabs li:last-child {
   height: 30rem;
   padding-top: 3rem;
   width: 100%;
+  right: 3rem;
 }
 .responsive .ecology_Sec #ecology_right #ecology_obj_3 {
   position: absolute;
