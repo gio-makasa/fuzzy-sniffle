@@ -520,7 +520,6 @@ h6 {
     width: -moz-fit-content;
     width: fit-content;
     height: 1.5rem;
-    display: block;
   }
   header #title h1 {
     color: rgba(51, 51, 51, 0.8235294118);
