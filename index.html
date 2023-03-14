@@ -1,298 +1,235 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./static/styles/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Portfolio</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="Page" />
-    <meta property="og:title" content="ალეგორიული პანო" />
-    <meta property="og:description" content="მეცნიერების, ადამიანის და მისი უსაზღვრო შესაძლებლობების შესახებ" />
-    <meta name="description" content="მეცნიერების, ადამიანის და მისი უსაზღვრო შესაძლებლობების შესახებ">
-    <link rel="stylesheet" href="./assets/css/style.min.css">
-    <script src="./assets/js/index.min.js" defer></script>
-    <title>ალეგორიული პანო</title>
-</head>
+	<body>
+		<header id="header">
+			<div>
+				<img class="logo" src="static/images/logo.png" alt="" />
+			</div>
+			<nav class="nav">
+				<ul>
+					<li>
+						<a href="#"><span>01.</span>About</a>
+					</li>
+					<li>
+						<a href="#"><span>02.</span>Experience</a>
+					</li>
+					<li>
+						<a href="#"><span>03.</span>Work</a>
+					</li>
+					<li>
+						<a href="#"><span>04.</span>Contact</a>
+					</li>
+				</ul>
 
-<body>
-    <header>
-        <div id="title">
-            <svg class="bars" onclick="openNav()" fill="#707070"
-                viewBox="0 0 448 512">
-                <path
-                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-            </svg>
-            <h1>ალეგორიული პანო</h1>
-            <p>მეცნიერების, ადამიანის და მისი უსაზღვრო შესაძლებლობების შესახებ</p>
-        </div>
-        <nav id="navigation">
-            <ul id="tabs">
-                <li id="closebtn" onclick="closeNav()">
-                    <svg class="xmark" xmlns="http://www.w3.org/2000/svg" fill="#707070" viewBox="0 0 320 512">
-                        <path
-                            d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-                    </svg>
-                </li>
-            </ul>
-        </nav>
-    </header>
+				<a href="#" class="Btn">Resume</a>
+			</nav>
+			<div class="icon">
+				<i class="fa-solid fa-bars openNavbar"></i>
+				<i class="fa-solid fa-xmark closeNavbar"></i>
+			</div>
+		</header>
 
-    <main>
-        <section class="slider_Sec show">
-            <p>მეცნიერების, ადამიანის და მისი უსაზღვრო შესაძლებლობების შესახებ</p>
-            <div class="mySlide">
-                <embed src="./assets/images/slide.svg" type="image/svg+xml" />
-                <img src="./assets/images/slide_responsive.svg" alt="slider">
-            </div>
+		<main>
+			<section class="developer-intro">
+				<h1 class="dev-name">hi, my name is</h1>
+				<div id="devName"></div>
+				<div class="first-btn">
+					<a class="Btn" href="#">check out my course</a>
+				</div>
+			</section>
 
-            <svg id="arrow-left" class="angle-left" onclick="plusSlides(-1)" xmlns="http://www.w3.org/2000/svg"
-                fill="#707070" viewBox="0 0 320 512">
-                <path
-                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-            </svg>
+			<section id="about">
+				<h2>about me</h2>
+				<div class="info">
+					<div id="aboutMe"></div>
+					<div class="profileWrapper">
+						<img id="profilePhoto" src="" alt="profile" />
+					</div>
+					<ul id="devStack"></ul>
+				</div>
+			</section>
 
-            <svg id="arrow-right" class="angle-right" onclick="plusSlides(1)" xmlns="http://www.w3.org/2000/svg"
-                fill="#707070" viewBox="0 0 320 512">
-                <path
-                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-            </svg>
-        </section>
+			      
+			<section class="work-experience">
+				<div class="work-title">
+					<span>02.</span>
+					<h2>Where I've Worked</h2>
+				</div>
 
-        <section class="introduction_Sec">
-            <h2>შესავალი</h2>
-            <p>
-                ამბის მოყოლა შეიძლება სიტყვებით და ძირითადად ადამიანები სწორედ ამ ფორმით ვცვლით ერთმანეთში
-                ისტორიებს, მაგრამ თუკი
-                კაცობრიობის ისტორიას გადავავლებთ თვალს დავინახავთ, რომ უამრავი ამბავი გამოსახულებით იყო მოყოლილი.
-                სხვადასხვა რელიგიის
-                მიმდევართა მიერ შექმნილი კედლის მხატვრობა სიტყვებით გამოუთქმელი იდეების ნახატებით მოყოლის მცდელობაა.
-                რასაც სიტყვები
-                აუბრალოებს, ღვთაებრივ იერს აკარგვინებს, ნახატი ღრმა შინაარს, ენით გამოუთქმელ იერს ანიჭებს. მოხატული
-                ტაძარი, ნახატების
-                გამოფენისგან განსხვავებით ერთგვარი წიგნია, რომელშიც ფიგურის ზომას, ადგილმდებარეობას და მონაცვლეობას
-                შინაარსობრივი დატვირთვა
-                აქვს. სადაც დამთვალიერებელი მის წინაშე გაშლილი მოქმედების თანამონაწილე, ამბის ნაწილი ხდება.
-                საუკუნეების განმავლობაში
-                ადამიანები კედლების თვალიერებით ეცნობოდნენ სამყაროს, რომელიც სიტყვებით გამოუთქმელი იყო. ბერძნული და
-                რომაული, მოზაიკით
-                მოპირკეთებული ნადიმის დარბაზები, მითების სამყაროში ჯადოსნური მოგზაურობაა. მონუმენტური კედლის
-                მხატვრობა შუასაუკუნეების
-                მმართველების სასახლეებში ალეგორიული ხერხით გადმოცემული სიბრძნეა. ფაშისტური გერმანიის და კომუნისტური
-                საბჭოთა კავშირის
-                კედლის მხატვრობა მძლავრი პროპაგანდისტული იარაღი, რომელიც ყალბ იდეალებს ემსახურება.
-            </p>
-            <p>
-                შეუძლებელია კედლის მხატვრობას დღეს მივუდგეთ ისევე, როგორც ეს კაცობრიობის განვითარების სხვადასხვა
-                ეტაპზე იყო. შეუძლებელია
-                ძველი დამაჯერებლობით გაიმეორო ადრე არაერთხელ ნათქვამი. შეუძლებელია გამეორებისას კვლავ დამაჯერებელი
-                იყო. ამიტომ ამ პანოში
-                ირონია იკითხება. ეს უნივერსალური ხერხი, ირონია ყველაზე გამოუვალი სიტუაციებიდან უნივერსალური
-                გამოსავალია. შესაბამისად პანოს
-                გაცნობისას მკაცრად ნუ განსჯით ავტორს და თქვენც სამყაროს აღქმის უნივერსალური იარაღი, იუმორი
-                გამოიყენეთ.
-            </p>
-        </section>
+				<div class="work-content"></div>
+			</section>
 
-        <section class="three_Sec">
-            <img src="./assets/images/01_samiPigura_background.svg" id="three_Sec_back" alt="sami_figura_background">
-            <img src="./assets/images/01_samiPigura_object_01.svg" id="three_Sec_obj" alt="sami_figura">
+			<section class="projects">
+				<div class="projects-title">
+					<span>03.</span>
+					<h2>Some Things I've Built</h2>
+				</div>
 
-            <div id="three_figure_info">
-                <h2>სამი ფიგურა ალეგორიული პანოს ცენტრში</h2>
+				<div class="projects-content"></div>
+			</section>
+		</main>
 
-                <p>
-                    პანოს ცენტრალურ ნაწილში სამი ფიგურაა განთავსებული. ცენტრალურ ფიგურას
-                    ხელში ხილი უჭირავს და თითქოს პანოს დამთვალიერებელს უყურებს. მარჯვენა ფიგურას თავმომწონედ
-                    მარცხენა
-                    ხელი
-                    თეძოზე აქვს შემოდებული. მარჯვნივ და მარცხნივ მდგარ ფიგურებს უცნაური ობიექტი, ძველებური
-                    სამედიცინო
-                    ფონენდოსკოპი უჭირავს ხელში, რაც ერთგვარი მინიშნებაა იმაზე რომ ისინი სამყაროს მიყურადებას,
-                    სამყაროს
-                    მოსმენას
-                </p>
-                <span class="three_Sec_resp">
-                    <img src="./assets/images/01_samiPigura_object_01.svg" alt="sami_figura">
-                </span>
-                <p>
-                    ცდილობენ. როდესაც ამ ფიგურებს ვუყურებთ შეიძლება პარისის სასამართლო გაგვახსენდეს. თუკი მაშინ
-                    პარისის
-                    წინაშე
-                    სამი მზეთუნახავი წარსდგა, რომელიც ერთმანეთს სილამაზეში ეჯიბრებოდა, ჩვენ ვუყურებთ სამი
-                    ადამიანის
-                    შეჯიბრს,
-                    რომლებიც მნახველის წინაშე ისეთებად არიან წარმოდგენილი როგორებიც არიან. შელამაზების,
-                    ეპითეტების
-                    გარეშე.
-                    შესაბამისად ეს არა გარეგნული სილამაზის არამედ, გონებრივი ძალების პაექრობაა. ამავე დროს
-                    პარისის
-                    სასამართლოსაგან განსხვავებით პანოზე წარმოდგენილი კომპოზიცია თავისუფალია გედერული
-                    სტერეოტიპებისაგან
-                    რომელიც
-                    ანტიკურ სამყაროში არსებობდა.
-                </p>
-                <p>
-                    ხილი რომელიც ცენტრალურ ფიგურას უჭირავს ხელში ძველ ბიბლიურ ისტორიასაც,
-                    შემეცნების ნაყოფსაც გვახსენებს, რომელიც სამოთხის ბაღში იზრდებოდა. მიუხედავად იმისა რომ
-                    ქრისტიანული
-                    ტრადიცია
-                    ხილს ხშირად ვაშლის სახით გამოსახავს, ძველ აღთქმაში ისევე როგორც პანოზე არ არის
-                    დაკონკრეტებული
-                    რომელ
-                    ნაყოფზე
-                    არის საუბარი.
-                </p>
-            </div>
-        </section>
-
-        <section class="continue_Sec">
-            <img id="continue_back_left" src="./assets/images/02_gagrdzeleba_background.svg"
-                alt="leftContinueBackground">
-            <img id="continue_obj_left" src="./assets/images/02_gagrdzeleba_object_01.svg" alt="leftGagrzeleba">
-
-            <div id="continue_info">
-                <h2>ერთგვარი გაგრძელება</h2>
-                <p>
-                    სამი ფიგურის ერთგვარი გაგრძელებაა, კომპოზიციის მარჯვენა და მარცხენა ბოლოში მდგარი
-                    ფიგურები. მათ იმ ფერის სამოსი აქვთ როგორი ფერისაც არის ნაყოფი ცენტრალური ფიგურის ხელში. მარცხნივ
-                    მდგომ
-                    ქალის ფიგურას ხელში, შუშის ჭურჭელში მოთავსებული ყვავილი უჭირავს, რომელსაც გულმოდგინედ აკვირდება.
-                    ის
-                </p>
-                <div id="continue_images_resp">
-                    <img id="continue_obj_resp" src="./assets/images/02_gagrdzeleba_object_01.svg" alt="leftGagrzeleba">
-                </div>
-                <p>
-                    ბუნებას შეიმეცნებს. ხოლო მარჯვენა მხარეს მდგარი ფიგურა ჭოგრიტში იყურება. ის ცდილობს პანოს მიღმა
-                    სამყარო
-                    შეიმეცნოს. ორივე ფიგურა მარჯვნივ ანუ საათის ისრის მოძრაობის მიმართულებით იყურება. რაც მიანიშნებს
-                    რომ
-                    ორივე, მამაკაცის და ქალის ფიგურაც მომავლზე არის ორიენტირებული.
-                </p>
-            </div>
-            <div id="continue_right">
-                <img id="continue_obj_right" src="./assets/images/02_gagrdzeleba_object_02.svg" alt="rightGagrzeleba">
-            </div>
-        </section>
-
-        <section class="ecology_Sec">
-            <img id="ecology_back_left" src="./assets/images/03_ekologia_background.svg" alt="leftEcologyBackground">
-            <img id="ecology_obj_1" src="./assets/images/03_ekologia_object_01.svg" alt="">
-
-            <div id="ecology_info">
-                <h2>ეკოლოგიური კონტექსტი</h2>
-
-                <p>
-                    ერთ-ერთ ფიგურას, რომელსაც მწვანე პერანგი აცვია ხელში მწვანე დროშა უჭირავს. მწვანე
-                    დროშა ყველაზე მაღალი ობიექტია კომპოზიციაში. დროშა მარჯვნივ არის მიმართული რაც იმაზე
-                    მიანიშნებს
-                    რომ
-                    ქარიც
-                    საათის ისრის მიმართულებით მოძრაობს. ეს კი გვაფიქრებინებს, რომ ადამიანის მის საარსებო
-                </p>
-                <div id="ecology_images_resp">
-                    <img id="ecology_obj_resp" src="./assets/images/03_ekologia_object_01.svg" alt="">
-                </div>
-                <p>
-                    გარემოსთან
-                    თანაარსებობა სწორი მიმართულებით, ჰარმონიულად უნდა განვითარდეს.
-                </p>
-                <p>
-                    მწვანე კაბაში გამოწყობილ ქალის ფიგურას
-                    ხელში უცნაური ობიექტი უჭირავს, რომელსაც გულმოდგინედ აკვირდება. ობიექტი ატომის მოდელს
-                    მოგვაგონებს,
-                    ასე
-                    გამოხატავდნენ ატომს კედლის მხატვრობაში და ქანდაკებაში. ფიგურა გარემოსთან ფრთხილ
-                    დამოკიდებულებაზე
-                    მიანიშნებს და ასევე გვიჩვენებს რომ ეკოლოგიურ საკითხებზე დაფიქრებისას ჩაღრმავება, დიდი
-                    ყურადღება
-                    არის
-                    საჭირო.
-                </p>
-                <p>
-                    მარჯვენა მხარეს მდგარ მამაკაცის ფიგურას მწვანე შარვალი და თეთრი პერანგი აცვია. ის მწვანე
-                    ჭოგრიტში იყურება. ჭოგრიტი საათის ისრის საწინააღმდეგოდ არის მიმართული. ამგვარად ფიგურა თავისი
-                    მზერით
-                    წარსულში იყურება და მიგვანიშნებს, რომ გარემოსთან დაკავშირებული პრობლემები ადამიანს თავისი
-                    წასულიდან
-                    მოსდევს.
-                </p>
-            </div>
-
-            <div id="ecology_right">
-                <img id="ecology_obj_2" src="./assets/images/03_ekologia_object_02.svg" alt="ecology_image">
-                <img id="ecology_obj_3" src="./assets/images/03_ekologia_object_03.svg" alt="ecology_image">
-            </div>
-        </section>
-
-        <section class="little_Sec">
-            <div id="little_info">
-                <h2>პატარა არსებების სამყარო</h2>
-                <p>
-                    პანოს ცენტრალური ნაწილიდან ოდნავ მარჯვნივ ორი ფიგურაა განთავსებული. მამაკაცის
-                    და ბავშვის. მამაკაცი მუხლებზე დგას, ცდილობს ბავშვის ფიგურას გაუტოლდეს, ცდილობს გააქროს ის
-                    ბარიერი
-                    რომელიც მასსა და ბავშვს შორის არსებობს. ორივე ფიგურა, მწერებს, პატარა არსებებს ეხმარება რათა მათ
-                    გარკვეულ, მაგრამ ჩვენთვის უცნობ მიზანს მიაღწიონ. ეს სცენა ინკლუზიურობის, თანასწორობის იდეის
-                    რეპრეზენტაციაა.
-                </p>
-            </div>
-
-            <div id="little_image">
-                <img src="./assets/images/04_pataraArsebebi_background.svg" id="little_back" alt="little_back">
-                <img src="./assets/images/04_pataraArsebebi_01_object.svg" id="little_obj" alt="patara_arsebebi">
-            </div>
-        </section>
-
-        <section class="stars_Sec">
-            <img src="./assets/images/05_varsklavebi_object_01.svg" id="stars_obj" alt="varskvlavebi">
-
-            <div id="stars_info">
-                <h2>მიწვდე ვარსკვლავებს</h2>
-                <p>
-                    კომპოზიციის მარჯვენა მხარეს დგას ფიგურა, იგი თითქოს გამჭვირვალეა. მას ხელები
-                    ვარსკვლავებისაკენ აქვს გაწვდენილი. იგი ვარსკვლავის მიწვდა და ახლა ვარსკვლავი ხელში უჭირავს, რაც
-                    მეცნიერების უსაზღვრო შესაძლებლობებზე მიანიშნებს. ადამიანის ძალისხმევას არ აქვს საზღვარი. ჩვენ
-                    შეგვიძლია ცაში ვარსკვლავებსაც მივწვდეთ.
-                </p>
-                <div id="stars_resp">
-                    <img src="./assets/images/05_varsklavebi_object_01.svg" id="stars_resp_obj" alt="varskvlavebi">
-                </div>
-                <p>
-                    ცაში ვარსკვლავებსა და ღრუბლებს შორის ადამიანის მიერ შექმნილი
-                    მექანიზმებიც დაფრინავენ. რაც მიანიშნებს რომ ადამიანის ხელით შექმნილი მოწყობილობები ცაში ისევე
-                    თავისუფლად
-                    გადაადგილდებიან, როგორც მაგალითად ვარსკვლავები ან ღრუბლები.
-                </p>
-            </div>
-        </section>
-
-        <section class="love_Sec">
-            <div id="love_info">
-                <h2>სიყვარული და მეცნიერება</h2>
-                <p>
-                    პანოზე მარცხენა მხარეს ორი ფიგურაა გამოსახული. მამაკაცის და ქალის ფიგურები
-                    ერთმანეთს თვალებში უყურებენ. მათ ხელში დიდი ზომის კოლბა უჭირავთ. მეცნიერება ყოველთვის საყვარელ
-                    საქმესთან
-                    არის დაკავშირებული. მაგრამ თუკი ამ სიყვარულს შენი მეორე ნახევარიც იზიარებს მაშინ ყველაზე
-                    ბედნიერი
-                    ადამიანი ხარ სამყაროში.
-                </p>
-            </div>
-
-            <div id="love_back">
-                <img src="./assets/images/06_sikvaruli_object_01.svg" id="love_obj" alt="siyvaruli">
-            </div>
-        </section>
-
-        <section class="galery_Sec">
-            ტექსტი და ფოტოები
-        </section>
-        <section class="about_Sec">
-            პროექტის შესახებ
-        </section>
-    </main>
-</body>
-
+		<footer>
+			<div class="social__icons">
+				<ul class="social__icons__list">
+					<li class="social__links">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather feather-github social__svg--dimensions"
+							>
+								<title>GitHub</title>
+								<path
+									d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37
+					3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44
+                    5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65
+                     16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07
+                      5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61
+                       6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+								></path>
+							</svg>
+						</a>
+					</li>
+					<li class="social__links">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather feather-instagram social__svg--dimensions"
+							>
+								<title>Instagram</title>
+								<rect
+									x="2"
+									y="2"
+									width="20"
+									height="20"
+									rx="5"
+									ry="5"
+								></rect>
+								<path
+									d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+								></path>
+								<line
+									x1="17.5"
+									y1="6.5"
+									x2="17.51"
+									y2="6.5"
+								></line>
+							</svg>
+						</a>
+					</li>
+					<li class="social__links">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather feather-twitter social__svg--dimensions"
+							>
+								<title>Twitter</title>
+								<path
+									d="M23 3a10.9 10.9 0 0 1-3.14 1.53
+                   4.48 4.48 0 0 0-7.86 3v1A10.66 10.66
+                    0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7
+                     2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72
+                      7.72 0 0 0 23 3z"
+								></path>
+							</svg>
+						</a>
+					</li>
+					<li class="social__links">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather feather-linkedin social__svg--dimensions"
+							>
+								<title>LinkedIn</title>
+								<path
+									d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+								></path>
+								<rect x="2" y="9" width="4" height="12"></rect>
+								<circle cx="4" cy="4" r="2"></circle>
+							</svg>
+						</a>
+					</li>
+					<li class="social__links">
+						<a href="#">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								role="img"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="feather feather-codepen social__svg--dimensions"
+							>
+								<title>CodePen</title>
+								<polygon
+									points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
+								></polygon>
+								<line x1="12" y1="22" x2="12" y2="15.5"></line>
+								<polyline
+									points="22 8.5 12 15.5 2 8.5"
+								></polyline>
+								<polyline
+									points="2 15.5 12 8.5 22 15.5"
+								></polyline>
+								<line x1="12" y1="2" x2="12" y2="8.5"></line>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="gmailLink">
+				<div>
+				  <a href="#" class="gmailName"></a>
+				</div>
+			  </div>
+		</footer>
+		<script type="module" src="static/js/app.js"></script>
+		<script type="module" src="static/js/animation.js"></script>
+	</body>
 </html>
