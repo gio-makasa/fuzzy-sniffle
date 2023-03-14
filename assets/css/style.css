@@ -516,10 +516,9 @@ h6 {
   header #title .bars {
     float: left;
     padding-right: 0.8rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: auto;
     height: 1.5rem;
+    display: block;
   }
   header #title h1 {
     color: rgba(51, 51, 51, 0.8235294118);
