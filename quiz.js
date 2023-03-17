@@ -1,4 +1,4 @@
-import QData from './info.json';
+import QData from './info.json' assert {type: 'json'};
 
 const q = document.getElementById("question");
 const a = document.getElementById("a").nextElementSibling;
