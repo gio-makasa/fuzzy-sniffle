@@ -1,11 +1,14 @@
-import QData from './info.json' assert {type: 'json'};
+async function getData() {
+    const response = await fetch('./info.json');
+    return response.json();
+}
 
+const QData = await getData();
 const q = document.getElementById("question");
 const a = document.getElementById("a").nextElementSibling;
 const b = document.getElementById("b").nextElementSibling;
 const c = document.getElementById("c").nextElementSibling;
 const d = document.getElementById("d").nextElementSibling;
-const labels = document.querySelectorAll('label');
 const answers = document.querySelectorAll('input[name="answers"]');
 const btn = document.getElementById("submit");
 
@@ -38,10 +41,10 @@ function checker() {
 
         if (x == QData[currentq].correct) {
             score++;
-            document.querySelector('input[name="answers"]:checked').nextElementSibling.style.color = 'green';
+            document.querySelector('input[name="answers"]:checked').parentElement.style.backgroundColor = 'green';
         } else {
-            document.querySelector('input[name="answers"]:checked').nextElementSibling.style.color = 'red';
-            document.getElementById(QData[currentq].correct).nextElementSibling.style.color = 'green';
+            document.querySelector('input[name="answers"]:checked').parentElement.style.backgroundColor = 'red';
+            document.getElementById(QData[currentq].correct).parentElement.style.backgroundColor = 'green';
         }
 
         if (currentq == QData.length - 1) {
@@ -63,8 +66,11 @@ function result() {
 }
 
 function reset() {
-    for (let i of labels) {
-        i.style.color = "black";
+    for (let i of answers) {
+        i.parentElement.style.backgroundColor = "transparent";
     }
     document.querySelector('input[name="answers"]:checked').checked = false;
 }
+
+
+window.start = start;
