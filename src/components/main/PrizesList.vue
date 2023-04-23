@@ -17,7 +17,7 @@ export default {
           title: "The Festival in Malta-ს საგზური",
         },
         {
-          img: "./src/assets/ticket-icon-sm.png",
+          img: "/src/assets/ticket-icon-sm.png",
           title:
             "სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება The Festival in Malta-ს საგზური",
         },
