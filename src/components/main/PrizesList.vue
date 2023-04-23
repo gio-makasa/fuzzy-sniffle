@@ -13,7 +13,7 @@ export default {
     return {
       prizes: [
         {
-          img: "./src/assets/travel-icon-sm.png",
+          img: "../../assets/travel-icon-sm.png",
           title: "The Festival in Malta-ს საგზური",
         },
         {
