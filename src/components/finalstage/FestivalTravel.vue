@@ -1,7 +1,7 @@
 <template>
   <div id="festivalTicket">
     <div id="festivalBody">
-      <img src="../../assets/final-info-img.jpg" alt="festival" />
+      <img src="/assets/final-info-img.jpg" alt="festival" />
       <h3>ᲒᲐᲔᲛᲒᲖᲐᲕᲠᲔ THE FESTIVAL IN MALTA-ᲖᲔ!</h3>
       <h4>
         The Festival სერიების ფარგლებში, ევროპაბეთი უკვე მეორედ აძლევს პოკერის
@@ -35,23 +35,23 @@ export default {
           title: "A კატეგორიის საგზურში შედის",
           list: [
             {
-              img: "./src/assets/final-item-ticket-icon.png",
+              img: "./assets/final-item-ticket-icon.png",
               title: "ორმხრივი ავიაბილეთი",
             },
             {
-              img: "./src/assets/final-item-event-icon.png",
+              img: "./assets/final-item-event-icon.png",
               title: "The Festival in Malta -ს მეინ ივენთის ბაი-ინი",
             },
             {
-              img: "./src/assets/final-item-event-icon.png",
+              img: "./assets/final-item-event-icon.png",
               title: "Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი",
             },
             {
-              img: "./src/assets/final-item-hotel-icon.png",
+              img: "./assets/final-item-hotel-icon.png",
               title: "სასტუმრო Golden Tulip Vivaldi Hote",
             },
             {
-              img: "./src/assets/final-item-money-icon.png",
+              img: "./assets/final-item-money-icon.png",
               title: "€500 სახარჯი ფული",
             },
           ],
@@ -61,23 +61,23 @@ export default {
           title: "A კატეგორიის საგზურში შედის",
           list: [
             {
-              img: "./src/assets/final-item-ticket-icon.png",
+              img: "./assets/final-item-ticket-icon.png",
               title: "ორმხრივი ავიაბილეთი",
             },
             {
-              img: "./src/assets/final-item-event-icon.png",
+              img: "./assets/final-item-event-icon.png",
               title: "The Festival in Malta -ს მეინ ივენთის ბაი-ინი",
             },
             {
-              img: "./src/assets/final-item-event-icon.png",
+              img: "./assets/final-item-event-icon.png",
               title: "Holdem ან Omaha ჰაიროლერ ტურნირის ბაი-ინი",
             },
             {
-              img: "./src/assets/final-item-hotel-icon.png",
+              img: "./assets/final-item-hotel-icon.png",
               title: "სასტუმრო Golden Tulip Vivaldi Hote",
             },
             {
-              img: "./src/assets/final-item-money-icon.png",
+              img: "./assets/final-item-money-icon.png",
               title: "€500 სახარჯი ფული",
             },
           ],
@@ -87,19 +87,19 @@ export default {
           title: "A კატეგორიის საგზურში შედის",
           list: [
             {
-              img: "./src/assets/final-item-ticket-icon.png",
+              img: "./assets/final-item-ticket-icon.png",
               title: "ორმხრივი ავიაბილეთი",
             },
             {
-              img: "./src/assets/final-item-event-icon.png",
+              img: "./assets/final-item-event-icon.png",
               title: "The Festival in Malta -ს მეინ ივენთის ბაი-ინი",
             },
             {
-              img: "./src/assets/final-item-hotel-icon.png",
+              img: "./assets/final-item-hotel-icon.png",
               title: "სასტუმრო",
             },
             {
-              img: "./src/assets/final-item-money-icon.png",
+              img: "./assets/final-item-money-icon.png",
               title: "€500 სახარჯი ფული",
             },
           ],

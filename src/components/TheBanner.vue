@@ -1,6 +1,6 @@
 <template>
   <div id="banner">
-    <img src="../assets/banner.jpg" alt="banner" />
+    <img src="/assets/banner.jpg" alt="banner" />
 
     <div id="head">
       <div id="dates">

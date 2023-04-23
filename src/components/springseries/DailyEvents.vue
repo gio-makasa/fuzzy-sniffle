@@ -12,7 +12,7 @@
           <p>ბაი-ინი - 550&#8382;</p>
           <p class="tournamentDate">27 აპრილი</p>
         </div>
-        <img src="../../assets/tournament-bg.png" alt="tournament" />
+        <img src="/assets/tournament-bg.png" alt="tournament" />
       </div>
 
       <div class="tournaments">
@@ -24,7 +24,7 @@
           <p>ბაი-ინი - 550&#8382;</p>
           <p class="tournamentDate">28 აპრილი</p>
         </div>
-        <img src="../../assets/tournament-bg.png" alt="tournament" />
+        <img src="/assets/tournament-bg.png" alt="tournament" />
       </div>
     </div>
 
@@ -40,9 +40,9 @@
       <picture>
         <source
           media="(max-width: 500px)"
-          srcset="../../assets/main-bg-sm.png"
+          srcset="/assets/main-bg-sm.png"
         />
-        <img src="../../assets/main-bg.png" alt="main-tournamentx" />
+        <img src="/assets/main-bg.png" alt="main-tournamentx" />
       </picture>
     </div>
 

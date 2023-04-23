@@ -4,12 +4,12 @@
     <div id="satelitesBody">
       <h4>სერიის ფარგლებში, ყოველდღიურად გაიმართება 3 ივენთი:</h4>
       <div id="sateliteDates">
-        <img src="../../assets/clock-regular.svg" alt="clock" />
+        <img src="/assets/clock-regular.svg" alt="clock" />
         <p>19:00 / 19:30 / 20:00</p>
       </div>
       <div id="sateliteImages">
-        <img src="../../assets/promo-left-img.png" alt="promo" />
-        <img src="../../assets/promo-right-img.png" alt="promo" />
+        <img src="/assets/promo-left-img.png" alt="promo" />
+        <img src="/assets/promo-right-img.png" alt="promo" />
       </div>
       <div id="sateliteText">
         <p>* ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან</p>

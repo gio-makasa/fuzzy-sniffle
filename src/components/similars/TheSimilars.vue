@@ -13,37 +13,37 @@ export default {
     return {
       cards: [
         {
-          img: "./img/100.png",
+          img: "./assets/100.png",
           color: "linear-gradient(2deg, #0D649B, #0D649BE8, #0D649B00)",
           h: "Get 300% Cashback",
           p: "retrieve 300% bet amount as real money only here",
         },
         {
-          img: "./src/assets/car.png",
+          img: "./assets/car.png",
           color: "linear-gradient(358deg, #EF541C 48%, #EF541C99, #EF541C00)",
           h: "Coming Soon",
           p: "retrieve 300% bet amount as real money only here",
         },
         {
-          img: "./src/assets/pragma.png",
+          img: "./assets/pragma.png",
           color: "linear-gradient(360deg, #1A176C 55%, #1A176C99, #1A176C00)",
           h: "Win a Jackpot",
           p: "retrieve 300% bet amount as real money only here",
         },
         {
-          img: "./src/assets/100.png",
+          img: "./assets/100.png",
           color: "linear-gradient(2deg, #0D649B, #0D649BE8, #0D649B00)",
           h: "Get 300% Cashback",
           p: "retrieve 300% bet amount as real money only here",
         },
         {
-          img: "./src/assets/car.png",
+          img: "./assets/car.png",
           color: "linear-gradient(358deg, #EF541C 48%, #EF541C99, #EF541C00)",
           h: "Coming Soon",
           p: "retrieve 300% bet amount as real money only here",
         },
         {
-          img: "./src/assets/pragma.png",
+          img: "./assets/pragma.png",
           color: "linear-gradient(360deg, #1A176C 55%, #1A176C99, #1A176C00)",
           h: "Win a Jackpot",
           p: "retrieve 300% bet amount as real money only here",

@@ -3,7 +3,7 @@
     <div class="head">
       <h3>{{ question }}</h3>
       <img
-        src="../../assets/arrow.svg"
+        src="/assets/arrow.svg"
         alt="arrow"
         :class="{ upDown: shown }"
       />

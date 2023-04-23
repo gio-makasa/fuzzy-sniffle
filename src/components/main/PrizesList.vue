@@ -13,16 +13,16 @@ export default {
     return {
       prizes: [
         {
-          img: "../../assets/travel-icon-sm.png",
+          img: "./assets/travel-icon-sm.png",
           title: "The Festival in Malta-ს საგზური",
         },
         {
-          img: "/src/assets/ticket-icon-sm.png",
+          img: "./assets/ticket-icon-sm.png",
           title:
             "სპეციალური ტურნირის „Cashgame Sharks” ბილეთი, სადაც გათამაშდება The Festival in Malta-ს საგზური",
         },
         {
-          img: "./src/assets/final-item-ticket-icon.png",
+          img: "./assets/final-item-ticket-icon.png",
           title: "ტექნიკის მაღაზიის ვაუჩერი",
         },
       ],

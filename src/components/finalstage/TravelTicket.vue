@@ -4,25 +4,25 @@
     <div id="travelBody">
       <div id="tickets">
         <div class="ticket" id="ticket1">
-          <img src="../../assets/poker-item-1-ticket-icon.png" alt="ticket" />
+          <img src="/assets/poker-item-1-ticket-icon.png" alt="ticket" />
           <h3>"Cashgame Highrollers" -</h3>
           <p>1 საგზური</p>
         </div>
 
         <div class="ticket" id="ticket2">
-          <img src="../../assets/poker-item-1-ticket-icon.png" alt="ticket" />
+          <img src="/assets/poker-item-1-ticket-icon.png" alt="ticket" />
           <h3>„Cashgame Grinders”</h3>
           <p>1 საგზური</p>
         </div>
 
         <div class="ticket" id="ticket3">
-          <img src="../../assets/poker-item-1-ticket-icon.png" alt="ticket" />
+          <img src="/assets/poker-item-1-ticket-icon.png" alt="ticket" />
           <h3>„Tournament Sharks“ -</h3>
           <p>1 საგზური</p>
         </div>
 
         <div class="ticket" id="ticket4">
-          <img src="../../assets/poker-item-2-ticket-icon.png" alt="ticket" />
+          <img src="/assets/poker-item-2-ticket-icon.png" alt="ticket" />
           <h3>„The Festival in Malta, GTD“</h3>
           <p>A კატეგორიის 1 საგზური</p>
           <p>B კატეგორიის 1 საგზური</p>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="ticket" id="ticket5">
-          <img src="../../assets/poker-item-2-ticket-icon.png" alt="ticket" />
+          <img src="/assets/poker-item-2-ticket-icon.png" alt="ticket" />
           <h3>„The Lord of the Rings“</h3>
           <p>C კატეგორიის 1 საგზური</p>
           <p>

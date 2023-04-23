@@ -6,7 +6,7 @@
     <div id="leaderBoards">
       <div id="pointClaim">
         <p>ქულების დაგროვების მექანიკა</p>
-        <img src="../../assets/mechanic-icon.png" alt="arrow" />
+        <img src="/assets/mechanic-icon.png" alt="arrow" />
       </div>
       <LeaderBoard />
       <PrizesList />

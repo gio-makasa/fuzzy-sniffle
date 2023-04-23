@@ -63,7 +63,7 @@ export default {
         display: block;
         position: absolute;
         content: "";
-        background-image: url("./src/assets/final-item-ticket-icon.png");
+        background-image: url("./assets/final-item-ticket-icon.png");
         background-size: 2rem;
         width: 2rem;
         height: 2rem;
@@ -116,12 +116,12 @@ export default {
 
     .rating:nth-child(1) {
       p:nth-child(3)::before {
-        background-image: url("./src/assets/travel-icon-sm.png");
+        background-image: url("./assets/travel-icon-sm.png");
       }
     }
     .rating:nth-child(2) {
       p:nth-child(3)::before {
-        background-image: url("./src/assets/ticket-icon-sm.png");
+        background-image: url("./assets/ticket-icon-sm.png");
       }
     }
 
