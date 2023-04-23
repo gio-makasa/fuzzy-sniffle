@@ -1,0 +1,23 @@
+@font-face {
+  font-family: helveticaFont;
+  src: url('./assets/fonts/helvetica/HelveticaNeue.ttc') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: helveticaFont;
+}
+
+$backgroundColor: #1c1d1e;
+$backgroundLightColor: #25292B;
+$backgroundDarkColor: #171718;
+$darkGrey: #2C3234;
+$lightBlack: #1E2122;
+$prizeBlack: #202324;
+$buttonBackColor: #F05A22;
+$activeButton: #EF5A21;
+$darkYellow: #FFBE00;
+$textColor: #ffffff;
+$lightBrown: #B78648;
