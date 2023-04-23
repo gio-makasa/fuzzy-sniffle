@@ -13,7 +13,7 @@ export default {
     return {
       cards: [
         {
-          img: "./src/assets/100.png",
+          img: "./img/100.png",
           color: "linear-gradient(2deg, #0D649B, #0D649BE8, #0D649B00)",
           h: "Get 300% Cashback",
           p: "retrieve 300% bet amount as real money only here",
