@@ -90,6 +90,22 @@ export default {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  #topLeaderboard {
+    background-color: $backgroundLightColor;
+
+    h3 {
+      background-color: $darkGrey;
+      padding: 3rem 0;
+      border-radius: 1.6rem;
+    }
+
+    #leaderBoards {
+      background-color: $backgroundLightColor;
+    }
+  }
+}
+
 @media screen and (max-width: 610px) {
   #topLeaderboard {
     #leaderBoards {

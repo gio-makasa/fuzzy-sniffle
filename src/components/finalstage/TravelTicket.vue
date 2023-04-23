@@ -145,6 +145,22 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  #travelTicket {
+    background-color: $backgroundLightColor;
+
+    > h3 {
+      background-color: $darkGrey;
+      border-radius: 1.6rem;
+      padding: 3rem 0;
+    }
+
+    #travelBody {
+      background-color: $backgroundLightColor;
+    }
+  }
+}
+
 @media screen and (max-width: 550px) {
   #travelTicket {
     #travelBody {

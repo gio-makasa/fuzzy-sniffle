@@ -74,4 +74,20 @@
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  #cashGames {
+    background-color: $backgroundLightColor;
+
+    h3 {
+      background-color: $darkGrey;
+      border-radius: 1.6rem;
+      padding: 3rem 0;
+    }
+    
+    #leaderBoards {
+      background-color: $backgroundLightColor;
+    }
+  }
+}
 </style>

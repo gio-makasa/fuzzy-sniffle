@@ -28,6 +28,7 @@
   margin-bottom: 2rem;
   text-align: center;
   padding: 0.2rem;
+  overflow: hidden;
 
   &::after {
     position: absolute;

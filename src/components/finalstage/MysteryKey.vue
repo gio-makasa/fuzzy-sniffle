@@ -127,4 +127,24 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 1000px) {
+  #mysteryKey {
+    background-color: $backgroundLightColor;
+
+    h3 {
+      background-color: $darkGrey;
+      border-radius: 1.6rem;
+      padding: 3rem 0;
+    }
+    
+    #mysteryBody {
+      background-color: $backgroundLightColor;
+
+      h4{
+        display: none;
+      }
+    }
+  }
+}
 </style>
