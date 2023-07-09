@@ -7,8 +7,7 @@
     <TheTours />
   </main>
 </template>
-
-<script setup>
+<script setup lang="ts">
 import TheHeader from "./components/TheHeader.vue";
 import TheSlider from "./components/TheSlider.vue";
 import TheCategories from "./components/TheCategories.vue";
