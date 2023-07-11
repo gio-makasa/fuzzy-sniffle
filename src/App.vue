@@ -21,7 +21,7 @@ import InputContainer from "./components/InputContainer.vue";
 
 const result = ref();
 const qr = ref("https://gio-makasa.github.io");
-const image = ref("./src/assets/back.jpg");
+const image = ref("./assets/back.jpg");
 
 function getData(QRurl: string, IMGurl: string) {
   if (QRurl != "") {
