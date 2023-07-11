@@ -21,7 +21,7 @@ function submit() {
     QRurl.value.value,
     IMGurl.value.files[0]
       ? URL.createObjectURL(IMGurl.value.files[0])
-      : "../assets/back.jpg"
+      : "./src/assets/back.jpg"
   );
 }
 </script>
