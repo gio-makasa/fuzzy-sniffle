@@ -2,7 +2,12 @@
   <h1>QR Code Generator</h1>
   <InputContainer @url="getData" />
   <div id="result" ref="result">
-    <img :src="image" alt="background" id="background" />
+    <img
+      src="./assets/back.jpg"
+      alt="background"
+      id="background"
+      ref="background"
+    />
     <img
       :src="
         'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + qr
@@ -21,13 +26,15 @@ import InputContainer from "./components/InputContainer.vue";
 
 const result = ref();
 const qr = ref("https://gio-makasa.github.io");
-const image = ref("./src/assets/back.jpg");
+const background = ref();
 
 function getData(QRurl: string, IMGurl: string) {
   if (QRurl != "") {
     qr.value = QRurl;
   }
-  image.value = IMGurl;
+  if (IMGurl) {
+    background.value.src = IMGurl;
+  }
 }
 
 function download() {
