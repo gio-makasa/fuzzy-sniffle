@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  username: string = '';
+  hidden = false;
 
-  onReset() {
-    this.username = '';
+  onC() {
+    this.hidden = !this.hidden;
   }
 }
